@@ -1,0 +1,230 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <title>Mars Explorations</title>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="description" content="HTML5 website template">
+  <meta name="keywords" content="Mars, template, html, sass, jquery">
+  <meta name="author" content="Donley Gustave">
+  <link rel="stylesheet" href="static/css/main.css">
+  <link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
+</head>
+<body>
+
+<!-- notification for small viewports and landscape oriented smartphones -->
+<div class="device-notification">
+  <a class="device-notification--logo" href="#0">
+    <img src="{{url_for('static', filename='img/marsX.png')}}" alt="Mars">
+    <p>Mars Now</p>
+  </a>
+  <p class="device-notification--message">In this assignment, you will build a web application that scrapes 
+    various websites for data related to the Mission to Mars and displays the information in a single HTML page..</p>
+</div>
+
+<div class="perspective effect-rotate-left">
+  <div class="container"><div class="outer-nav--return"></div>
+    <div id="viewport" class="l-viewport">
+      <div class="l-wrapper">
+        <header class="header">
+          <a class="header--logo" href="#0">
+            <img src="{{url_for('static', filename='img/marsX.png')}}" alt="Mars" width= '30'height = '30'>
+            <p>Mars Now</p>
+          </a>
+          <!-- <button class="header--cta cta">Scrape</button>
+          <div class="header--nav-toggle">
+            <span></span>
+          </div> -->
+        </header>
+        <nav class="l-side-nav">
+          <ul class="side-nav">
+            <li class="is-active"><span>Home</span></li>
+            <li><span>Mosaic's of Mars</span></li>
+            <li><span> Featured </span></li>
+            <li><span> About </span></li>
+            <li><span>Space X</span></li>
+          </ul>
+        </nav>
+        <ul class="l-main-content main-content">
+          <li class="l-section section section--is-active">
+            <div class="intro">
+              <div class="intro--banner">
+                <h1>Mars the<br>interactive<br>experience</h1>
+                <button class="cta">More Information
+                  <svg version="1.1" id="Layer_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" viewBox="0 0 150 118" style="enable-background:new 0 0 150 118;" xml:space="preserve">
+                  <g transform="translate(0.000000,118.000000) scale(0.100000,-0.100000)">
+                    <path d="M870,1167c-34-17-55-57-46-90c3-15,81-100,194-211l187-185l-565-1c-431,0-571-3-590-13c-55-28-64-94-18-137c21-20,33-20,597-20h575l-192-193C800,103,794,94,849,39c20-20,39-29,61-29c28,0,63,30,298,262c147,144,272,271,279,282c30,51,23,60-219,304C947,1180,926,1196,870,1167z"/>
+                  </g>
+                  </svg>
+                  <span class="btn-background"></span>
+                </button>
+                <a href='/scrape'><button>Scrape</a>
+                    <svg version="1.1" id="Layer_1" xmlns="http://www.w3.org/2000/svg"  x="0px" y="0px" viewBox="0 0 150 118" style="enable-background:new 0 0 150 118;" xml:space="preserve">
+                    <g transform="translate(0.000000,118.000000) scale(0.100000,-0.100000)">
+                      <path d="M870,1167c-34-17-55-57-46-90c3-15,81-100,194-211l187-185l-565-1c-431,0-571-3-590-13c-55-28-64-94-18-137c21-20,33-20,597-20h575l-192-193C800,103,794,94,849,39c20-20,39-29,61-29c28,0,63,30,298,262c147,144,272,271,279,282c30,51,23,60-219,304C947,1180,926,1196,870,1167z"/>
+                    </g>
+                    </svg>
+                  <span class="btn-background"></span>
+                </button>
+                <img src="{{url_for('static', filename='/img/introduction-visual.png')}}" alt="Welcome"></img>
+              </div>
+              <div class="intro--options">
+                <a href="#0">
+                  <h3></h3>
+                  <p></p>
+                </a>
+                <a href="#0">
+                  <h3>{{mars_dict.title}}</h3>
+                  <p>{{mars_dict.summary}}</p>
+                </a>
+                <a href="#0">
+                  <h3></h3>
+                </a> 
+              </div>
+            </div>
+          </li>
+          <li class="l-section section">
+            <div class="work">
+              <h2>Mosaics of Mars</h2>
+              {% for hemisphere in mars_dict.hemisphere_images                %} 
+              <div class="work--lockup">
+                <ul class="slider">
+                  <li class="slider--item slider--item-left">
+                    <a href="#0">
+                      <div class="slider--item-image">
+                        <img src="{{hemisphere.img_url[0]}}" alt="Victory">
+                      </div>
+                      <p class="slider--item-title">{{ hemisphere.title[0]}}</p>
+                      <p class="slider--item-description"></p>
+                    </a>
+                  </li>
+                  <li class="slider--item slider--item-center">
+                    <a href="#0">
+                      <div class="slider--item-image">
+                        <img src="{{hemisphere.img_url[1]}}" alt="Metiew and Smith">
+                      </div>
+                      <p class="slider--item-title">{{ hemisphere.title[1]}}</p>
+                      <p class="slider--item-description"></p>
+                    </a>
+                  </li>
+                  <li class="slider--item slider--item-right">
+                    <a href="#0">
+                      <div class="slider--item-image">
+                        <img src={{hemisphere.img_url[2]}} alt="1">
+                      </div>
+                      <p class="slider--item-title">{{ hemisphere.title[2]}}</p>
+                      <p class="slider--item-description"></p>
+                    </a>
+                  </li>
+                  <li class="slider--item slider--item-right">
+                    <a href="#0">
+                      <div class="slider--item-image">
+                        <img src="{{hemisphere.img_url[3]}}" alt="Alex Nowak">
+                      </div>
+                      <p class="slider--item-title">{{ hemisphere.title[3]}}</p>
+                      <p class="slider--item-description"></p>
+                    </a>
+                  </li>
+                </ul>
+                <div class="slider--prev">
+                  <svg version="1.1" id="Layer_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px"
+                  viewBox="0 0 150 118" style="enable-background:new 0 0 150 118;" xml:space="preserve">
+                  <g transform="translate(0.000000,118.000000) scale(0.100000,-0.100000)">
+                    <path d="M561,1169C525,1155,10,640,3,612c-3-13,1-36,8-52c8-15,134-145,281-289C527,41,562,10,590,10c22,0,41,9,61,29
+                    c55,55,49,64-163,278L296,510h575c564,0,576,0,597,20c46,43,37,109-18,137c-19,10-159,13-590,13l-565,1l182,180
+                    c101,99,187,188,193,199c16,30,12,57-12,84C631,1174,595,1183,561,1169z"/>
+                  </g>
+                  </svg>
+                </div>
+                <div class="slider--next">
+                  <svg version="1.1" id="Layer_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" viewBox="0 0 150 118" style="enable-background:new 0 0 150 118;" xml:space="preserve">
+                  <g transform="translate(0.000000,118.000000) scale(0.100000,-0.100000)">
+                    <path d="M870,1167c-34-17-55-57-46-90c3-15,81-100,194-211l187-185l-565-1c-431,0-571-3-590-13c-55-28-64-94-18-137c21-20,33-20,597-20h575l-192-193C800,103,794,94,849,39c20-20,39-29,61-29c28,0,63,30,298,262c147,144,272,271,279,282c30,51,23,60-219,304C947,1180,926,1196,870,1167z"/>
+                  </g>
+                  </svg>
+                </div>
+              </div>
+              {% endfor %}
+            </div>
+          </li>
+          <li class="l-section section">
+            <div class="about">
+              <div class="about--banner">
+                <h2>Must<br> See <br>to<br>Believe</h2>
+                <div class="container">
+                <div class="col-md-6">
+                <h5>Mars Facts</h5>
+                  <table>{{mars_dict.fact_table | safe}}</table>
+                  </div>
+                </div>
+              <div class="about--options">
+                <div class="col-md-6">
+                  <img src="{{mars_dict.featured_image}}" alt="Featured Image" width="400" height="250">Space Images</img>
+                </div>
+              </div>
+            </div>
+            </div>
+          </li>
+          <li class="l-section section">
+            <div class="contact">
+              <div class="contact--lockup">
+                <div class="modal">
+                  <div class="modal--information">
+                    <h6>Donley Gustave</h6>
+                    <p>Alpharetta, GA</p>
+                    <a href="mailto:donleyc.gustave@gmail.com">donleyc.gustave@gmail.com</a>
+                    <a href="tel:+14049667650">(404) 966 7650</a>
+                  </div>
+                  <div class="row">
+                    <div class="col-md-2">
+                        <hr class="w3-opacity">
+                        <image src="{{url_for('static', filename='/img/bebop.png')}}" 
+                        alt="Space Cowboy" class=" g1_img w3-image w3-center  w3-padding-32 w3-hover-blue" width="100" height="80"></image>
+                    </div>
+                    <div class="col-md-10">
+                        <h4 class="w3-padding-16 w3-center">Technical Skills</h4>
+                        <p class="w3-wide">Python</p>
+                        <div class="w3-white">
+                            <div class="w3-container w3-padding-small w3-center w3-blue" style="width:95%">95%</div>
+                        </div>
+                        <p class="w3-wide">Selenium</p>
+                        <div class="w3-white">
+                            <div class="w3-container w3-padding-small w3-center w3-blue" style="width:85%">85%</div>
+                        </div>
+                        <p class="w3-wide">Mongo DB</p>
+                        <div class="w3-white">
+                            <div class="w3-container w3-padding-small w3-center w3-blue" style="width:80%">80%</div>
+                        </div>
+                        <p class="w3-wide">HTML5/CSS</p>
+                        <div class="w3-white">
+                            <div class="w3-container w3-padding-small w3-center w3-blue" style="width:95%">95%</div>
+                        </div>
+                        <p class="w3-wide">Flask/Jinja2</p>
+                        <div class="w3-white">
+                            <div class="w3-container w3-padding-small w3-center w3-blue" style="width:65%">65%</div>     
+                        </div>
+                    </div>
+                </div>
+                </div>
+              </div>
+            </div>
+          </li>
+        </ul>
+      </div>
+    </div>
+  </div>
+  <!-- <ul class="outer-nav">
+    <li class="is-active">Home</li>
+    <li>Works</li>
+    <li>About</li>
+    <li>Contact</li>
+    <li>Hire us</li>
+  </ul> -->
+</div>
+
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/2.2.4/jquery.min.js"></script>
+<script>window.jQuery || document.write("<script src='{{url_for('static', filename='/js/vendor/jquery-2.2.4.min.js')}}'><\/script>")</script>
+<script src="{{url_for('static', filename='/js/functions-min.js')}}"></script>
+</body>
+</html>

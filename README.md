@@ -1,8 +1,31 @@
 ## Background
 
-Using HTML and CSS to create a dashboard showing off the analysis of an Open Weather API.
+Prepare a dashboard that lays out your theme, coding approach, data munging techniques, and final visualization. Focus on telling a story through data visualizations:
 
-![static/images/openweather-negative-logo-RGB.png](static/images/openweather-negative-logo-RGB.png)
+The goal is to get a market insight of the S&P 500 , their individual sectors, and stocks within those sectors for a novice investor. Create a beautiful dashboard with performance graphics, company profiles, and relevant news:
+
+3 questions to answer for my cllient for their own personal dashboard: 
+
+How does S&P 500 index perform? 
+What are the top 3;  best value stocks and  fastest earning growth stocks within each sector?  
+Display the top 3 company profiles of the S&P 500 sectors for curious investors.
+
+<!-- Table of Contents
+About the Project
+Built With
+Getting Started
+Prerequisites
+Installation
+Usage
+Roadmap
+Contributing
+License
+Contact
+Acknowledgements
+About The Project -->
+
+
+
 
 ### Using the repository in a local enviroment
 
@@ -15,9 +38,18 @@ Using HTML and CSS to create a dashboard showing off the analysis of an Open Wea
 
 ## Latitude - Latitude Analysis Dashboard with Attitude
 
-I created a visualization dashboard website using visualizations we've created in a past project. Specifically, I be plotted [weather data](data/processed/cities.csv).
+We created a visualization dashboard website using visualizations we've created from external data. 
+These visualizations include a Python Flask–powered RESTful API, HTML/CSS, JavaScript, and at least one database (SQL, MongoDB, SQLite, etc.). 
+This dashboard should fall into one of the below four tracks: 
+A custom “creative” D3.js dashboard containg powerful plots. 
+A combination of web scraping and Leaflet or Plotly.
+A dashboard page with multiple charts that update from the same data
+A “thick” server that performs multiple manipulations on data in a database prior to visualization (must be approved).
+This dashboard includes at least multiple JS libraries.
+This dashboard is powered by a data set with at least 100 records.
+This dashboard includes some level of user-driven interaction (e.g., menus, dropdowns, textboxes).
+This final visualization includes at least three views. 
 
-In building this dashboard, I created individual pages for each plot and a means by which we can navigate between them. These pages will contain the visualizations and their corresponding explanations. We'll also have a landing page, a page where we can see a comparison of all of the plots, and another page where we can view the data used to build them.
 
 
 

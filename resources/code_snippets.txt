@@ -9,3 +9,6 @@ https://stackoverflow.com/questions/42971438/click-links-one-by-one-with-seleniu
 
 Make variables in a Python function global: 
 https://stackoverflow.com/questions/11543297/make-all-variables-in-a-python-function-global
+
+Create an awesome Readme: 
+https://github.com/othneildrew/Best-README-Template/blob/master/README.md#usage

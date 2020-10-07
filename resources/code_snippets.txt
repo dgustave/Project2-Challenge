@@ -12,3 +12,12 @@ https://stackoverflow.com/questions/11543297/make-all-variables-in-a-python-func
 
 Create an awesome Readme: 
 https://github.com/othneildrew/Best-README-Template/blob/master/README.md#usage
+
+Using Partial text and get attribute selenium: 
+https://stackoverflow.com/questions/12445612/how-can-i-get-the-href-of-elements-found-by-partial-link-text
+
+Parse HTML and Read HTML Table with Selenium Python: 
+https://stackoverflow.com/questions/41214702/parse-html-and-read-html-table-with-selenium-python
+
+How can I download a file on a click event using selenium?: 
+https://stackoverflow.com/questions/18439851/how-can-i-download-a-file-on-a-click-event-using-selenium

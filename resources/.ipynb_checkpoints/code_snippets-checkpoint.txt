@@ -1,0 +1,11 @@
+Selenium Documentation: 
+https://selenium-python.readthedocs.io/locating-elements.html
+
+Extracting the image src based on attribute with BeautifulSoup: 
+https://stackoverflow.com/questions/18304532/extracting-image-src-based-on-attribute-with-beautifulsoup
+
+Click links one by one with Selenium webdriver Python:
+https://stackoverflow.com/questions/42971438/click-links-one-by-one-with-selenium-webdriver-python
+
+Make variables in a Python function global: 
+https://stackoverflow.com/questions/11543297/make-all-variables-in-a-python-function-global

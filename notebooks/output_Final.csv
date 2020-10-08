@@ -1,0 +1,144 @@
+﻿ids,labels,parents
+Communication,Communication,
+Energy,Energy,
+Discretionary,Discretionary,
+Staples,Staples,
+Financials,Financials,
+Health,Health,
+Industrials,Industrials,
+IT,IT,
+Materials,Materials,
+Real Estate,Real Estate,
+Utilities,Utilities,
+Communication-Best Value,Best Value,Communication
+Communication-Fast Growing,Fast Growing,Communication
+Communication-Most Momentum,Most Momentum,Communication
+Energy-Best Value,Best Value,Energy
+Energy-Fast Growing,Fast Growing,Energy
+Energy-Most Momentum,Most Momentum,Energy
+Discretionary-Best Value,Best Value,Discretionary
+Discretionary-Fast Growing,Fast Growing,Discretionary
+Discretionary-Most Momentum,Most Momentum,Discretionary
+Staples-Best Value,Best Value,Staples
+Staples-Fast Growing,Fast Growing,Staples
+Staples-Most Momentum,Most Momentum,Staples
+Financials-Best Value,Best Value,Financials
+Financials-Fast Growing,Fast Growing,Financials
+Financials-Most Momentum,Most Momentum,Financials
+Health-Best Value,Best Value,Health
+Health-Fast Growing,Fast Growing,Health
+Health-Most Momentum,Most Momentum,Health
+Industrials-Best Value,Best Value,Industrials
+Industrials-Fast Growing,Fast Growing,Industrials
+Industrials-Most Momentum,Most Momentum,Industrials
+IT-Best Value,Best Value,IT
+IT-Fast Growing,Fast Growing,IT
+IT-Most Momentum,Most Momentum,IT
+Materials-Best Value,Best Value,Materials
+Materials-Fast Growing,Fast Growing,Materials
+Materials-Most Momentum,Most Momentum,Materials
+Real Estate-Best Value,Best Value,Real Estate
+Real Estate-Fast Growing,Fast Growing,Real Estate
+Real Estate-Most Momentum,Most Momentum,Real Estate
+Utilities-Best Value,Best Value,Utilities
+Utilities-Fast Growing,Fast Growing,Utilities
+Utilities-Most Momentum,Most Momentum,Utilities
+Best Value,,Communication-Best Value
+Best Value,,Communication-Best Value
+Best Value,,Communication-Best Value
+Fast Growing,,Communication-Fast Growing
+Fast Growing,,Communication-Fast Growing
+Fast Growing,,Communication-Fast Growing
+Most Momentum,,Communication-Most Momentum
+Most Momentum,,Communication-Most Momentum
+Most Momentum,,Communication-Most Momentum
+Best Value,,Energy-Best Value
+Best Value,,Energy-Best Value
+Best Value,,Energy-Best Value
+Fast Growing,,Energy-Fast Growing
+Fast Growing,,Energy-Fast Growing
+Fast Growing,,Energy-Fast Growing
+Most Momentum,,Energy-Most Momentum
+Most Momentum,,Energy-Most Momentum
+Most Momentum,,Energy-Most Momentum
+Best Value,,Discretionary-Best Value
+Best Value,,Discretionary-Best Value
+Best Value,,Discretionary-Best Value
+Fast Growing,,Discretionary-Fast Growing
+Fast Growing,,Discretionary-Fast Growing
+Fast Growing,,Discretionary-Fast Growing
+Most Momentum,,Discretionary-Most Momentum
+Most Momentum,,Discretionary-Most Momentum
+Most Momentum,,Discretionary-Most Momentum
+Best Value,,Staples-Best Value
+Best Value,,Staples-Best Value
+Best Value,,Staples-Best Value
+Fast Growing,,Staples-Fast Growing
+Fast Growing,,Staples-Fast Growing
+Fast Growing,,Staples-Fast Growing
+Most Momentum-mno,,Staples-Most Momentum
+Most Momentum-mnp,,Staples-Most Momentum
+Most Momentum-mnq,,Staples-Most Momentum
+Best Value,,Financials-Best Value
+Best Value,,Financials-Best Value
+Best Value,,Financials-Best Value
+Fast Growing,,Financials-Fast Growing
+Fast Growing,,Financials-Fast Growing
+Fast Growing,,Financials-Fast Growing
+Most Momentum-mno,,Financials-Most Momentum
+Most Momentum-mnp,,Financials-Most Momentum
+Most Momentum-mnq,,Financials-Most Momentum
+Best Value,,Health-Best Value
+Best Value-ABD,,Health-Best Value
+Best Value-ABE,,Health-Best Value
+Fast Growing-def,,Health-Fast Growing
+Fast Growing-deg,,Health-Fast Growing
+Fast Growing-deh,,Health-Fast Growing
+Most Momentum-mno,,Health-Most Momentum
+Most Momentum-mnp,,Health-Most Momentum
+Most Momentum-mnq,,Health-Most Momentum
+Best Value,,Industrials-Best Value
+Best Value,,Industrials-Best Value
+Best Value,,Industrials-Best Value
+Fast Growing-,,Industrials-Fast Growing
+Fast Growing-,,Industrials-Fast Growing
+Fast Growing,,Industrials-Fast Growing
+Most Momentum,,Industrials-Most Momentum
+Most Momentum,,Industrials-Most Momentum
+Most Momentum,,Industrials-Most Momentum
+Best Value,,IT-Best Value
+Best Value,,IT-Best Value
+Best Value,,IT-Best Value
+Fast Growing-,,IT-Fast Growing
+Fast Growing-,,IT-Fast Growing
+Fast Growing,,IT-Fast Growing
+Most Momentum,,IT-Most Momentum
+Most Momentum,,IT-Most Momentum
+Most Momentum,,IT-Most Momentum
+Best Value,,Materials-Best Value
+Best Value,,Materials-Best Value
+Best Value,,Materials-Best Value
+Fast Growing-,,Materials-Fast Growing
+Fast Growing-,,Materials-Fast Growing
+Fast Growing,,Materials-Fast Growing
+Most Momentum,,Materials-Most Momentum
+Most Momentum,,Materials-Most Momentum
+Most Momentum,,Materials-Most Momentum
+Best Value,,Real Estate-Best Value
+Best Value,,Real Estate-Best Value
+Best Value,,Real Estate-Best Value
+Fast Growing-,,Real Estate-Fast Growing
+Fast Growing-,,Real Estate-Fast Growing
+Fast Growing,,Real Estate-Fast Growing
+Most Momentum,,Real Estate-Most Momentum
+Most Momentum,,Real Estate-Most Momentum
+Most Momentum,,Real Estate-Most Momentum
+Best Value,,Utilities-Best Value
+Best Value,,Utilities-Best Value
+Best Value,,Utilities-Best Value
+Fast Growing-,,Utilities-Fast Growing
+Fast Growing-,,Utilities-Fast Growing
+Fast Growing,,Utilities-Fast Growing
+Most Momentum,,Utilities-Most Momentum
+Most Momentum,,Utilities-Most Momentum
+Most Momentum,,Utilities-Most Momentum

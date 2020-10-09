@@ -13,7 +13,8 @@ Plotly.d3.csv('output_Final.csv', function(err, rows){
           insidetextorientation: 'radial'
     }]
    console.log(data)
-    var layout = {margin: {l: 0, r: 0, b: 0, t:0}}
+    var layout = {margin: {l: 10, r: 0, b: 0, t:0},
+      paper_bgcolor: 'rgba(0,0,0,0)'}
   
     Plotly.newPlot('tester', data, layout)
   })

@@ -31,6 +31,7 @@
   <link href="../assets/css/material-dashboard.css?v=2.1.0" rel="stylesheet" />
   <!-- CSS Just for demo purpose, don't include it in your project -->
   <link href="../assets/demo/demo.css" rel="stylesheet" />
+  <script src="https://cdn.plot.ly/plotly-latest.min.js"></script>
 </head>
 
 <body class="dark-edition">
@@ -161,15 +162,16 @@
       <div class="content">
         <div class="container-fluid">
           <div class="row">
-            <div class="col-xl-4 col-lg-12">
+            <div class="col-xl-5 col-lg-12">
               <div class="card card-chart">
-                <div class="card-header card-header-success">
-                  <div class="ct-chart" id="dailySalesChart"></div>
+                <div class="card-header-icon card-header-success">
+                  <!-- <div class="ct-chart" id="dailySalesChart"></div> -->
+                  <div  id="tester" ></div> <!-- style="width:400px;height:400px;" -->  
                 </div>
                 <div class="card-body">
-                  <h4 class="card-title">Daily Sales</h4>
+                  <h4 class="card-title">S&P 500 Sectors</h4>
                   <p class="card-category">
-                    <span class="text-success"><i class="fa fa-long-arrow-up"></i> 55% </span> increase in today sales.</p>
+                    <span class="text-success"><i class="fa fa-long-arrow-up"></i> Top Performers </span> Best Value, Fast Growing, Most Momentum</p>
                 </div>
                 <div class="card-footer">
                   <div class="stats">
@@ -178,7 +180,7 @@
                 </div>
               </div>
             </div>
-            <div class="col-xl-4 col-lg-12">
+            <!-- <div class="col-xl-4 col-lg-12">
               <div class="card card-chart">
                 <div class="card-header card-header-warning">
                   <div class="ct-chart" id="websiteViewsChart"></div>
@@ -193,7 +195,7 @@
                   </div>
                 </div>
               </div>
-            </div>
+            </div> -->
             <div class="col-xl-4 col-lg-12">
               <div class="card card-chart">
                 <div class="card-header card-header-danger">
@@ -866,6 +868,7 @@
 
     });
   </script>
+  <script src= "../static/js/PlotlySunburst1.js"></script> 
 </body>
 
 </html>

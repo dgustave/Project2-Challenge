@@ -1,0 +1,144 @@
+ids,labels,parents
+Communication Services,Communication Services,
+Consumer Discretionary,Consumer Discretionary,
+Consumer Staples,Consumer Staples,
+Energy,Energy,
+Financials,Financials,
+Health Care,Health Care,
+Industrials,Industrials,
+Information Technology,Information Technology,
+Materials,Materials,
+Real Estate,Real Estate,
+Utilities,Utilities,
+Communication Services-Best Value,Best Value,Communication Services
+Communication Services-Fastest Growth,Fastest Growth,Communication Services
+Communication Services-Most Momentum,Most Momentum,Communication Services
+Consumer Discretionary-Best Value,Best Value,Consumer Discretionary
+Consumer Discretionary-Fastest Growth,Fastest Growth,Consumer Discretionary
+Consumer Discretionary-Most Momentum,Most Momentum,Consumer Discretionary
+Consumer Staples-Best Value,Best Value,Consumer Staples
+Consumer Staples-Fastest Growth,Fastest Growth,Consumer Staples
+Consumer Staples-Most Momentum,Most Momentum,Consumer Staples
+Energy-Best Value,Best Value,Energy
+Energy-Fastest Growth,Fastest Growth,Energy
+Energy-Most Momentum,Most Momentum,Energy
+Financials-Best Value,Best Value,Financials
+Financials-Fastest Growth,Fastest Growth,Financials
+Financials-Most Momentum,Most Momentum,Financials
+Health Care-Best Value,Best Value,Health Care
+Health Care-Fastest Growth,Fastest Growth,Health Care
+Health Care-Most Momentum,Most Momentum,Health Care
+Industrials-Best Value,Best Value,Industrials
+Industrials-Fastest Growth,Fastest Growth,Industrials
+Industrials-Most Momentum,Most Momentum,Industrials
+Information Technology-Best Value,Best Value,Information Technology
+Information Technology-Fastest Growth,Fastest Growth,Information Technology
+Information Technology-Most Momentum,Most Momentum,Information Technology
+Materials-Best Value,Best Value,Materials
+Materials-Fastest Growth,Fastest Growth,Materials
+Materials-Most Momentum,Most Momentum,Materials
+Real Estate-Best Value,Best Value,Real Estate
+Real Estate-Fastest Growth,Fastest Growth,Real Estate
+Real Estate-Most Momentum,Most Momentum,Real Estate
+Utilities-Best Value,Best Value,Utilities
+Utilities-Fastest Growth,Fastest Growth,Utilities
+Utilities-Most Momentum,Most Momentum,Utilities
+Best Value-VIAC,VIAC,Communication Services-Best Value
+Best Value-LUMN,LUMN,Communication Services-Best Value
+Best Value-DISCK,DISCK,Communication Services-Best Value
+Fastest Growth-ZM,ZM,Communication Services-Fastest Growth
+Fastest Growth-LBRDA,LBRDA,Communication Services-Fastest Growth
+Fastest Growth-JW.A,JW.A,Communication Services-Fastest Growth
+Most Momentum-ZM,ZM,Communication Services-Most Momentum
+Most Momentum-ZG,ZG,Communication Services-Most Momentum
+Most Momentum-TWLO,TWLO,Communication Services-Most Momentum
+Best Value-ARD,ARD,Consumer Discretionary-Best Value
+Best Value-MGM,MGM,Consumer Discretionary-Best Value
+Best Value-EBAY,EBAY,Consumer Discretionary-Best Value
+Fastest Growth-BERY,BERY,Consumer Discretionary-Fastest Growth
+Fastest Growth-F,F,Consumer Discretionary-Fastest Growth
+Fastest Growth-ETSY,ETSY,Consumer Discretionary-Fastest Growth
+Most Momentum-ZM,ZM,Consumer Discretionary-Most Momentum
+Most Momentum-ZG,ZG,Consumer Discretionary-Most Momentum
+Most Momentum-TWLO,TWLO,Consumer Discretionary-Most Momentum
+Best Value-ACI,ACI,Consumer Staples-Best Value
+Best Value-CPB,CPB,Consumer Staples-Best Value
+Best Value-KR,KR,Consumer Staples-Best Value
+Fastest Growth-ACI,ACI,Consumer Staples-Fastest Growth
+Fastest Growth-OLLI,OLLI,Consumer Staples-Fastest Growth
+Fastest Growth-KR,KR,Consumer Staples-Fastest Growth
+Most Momentum-SAM,SAM,Consumer Staples-Most Momentum
+Most Momentum-CHGG,CHGG,Consumer Staples-Most Momentum
+Most Momentum-TWOU,TWOU,Consumer Staples-Most Momentum
+Best Value-MUR,MUR,Energy-Best Value
+Best Value-LNG,LNG,Energy-Best Value
+Best Value-VVV,VVV,Energy-Best Value
+Fastest Growth-VLO,VLO,Energy-Fastest Growth
+Fastest Growth-AM,AM,Energy-Fastest Growth
+Fastest Growth-WMB,WMB,Energy-Fastest Growth
+Most Momentum-EQT,EQT,Energy-Most Momentum
+Most Momentum-COG,COG,Energy-Most Momentum
+Most Momentum-AM,AM,Energy-Most Momentum
+Best Value-BHF,BHF,Financials-Best Value
+Best Value-UNM,UNM,Financials-Best Value
+Best Value-MET,MET,Financials-Best Value
+Fastest Growth-WTM,WTM,Financials-Fastest Growth
+Fastest Growth-ARES,ARES,Financials-Fastest Growth
+Fastest Growth-PNC,PNC,Financials-Fastest Growth
+Most Momentum-ZM,ZM,Financials-Most Momentum
+Most Momentum-ZG,ZG,Financials-Most Momentum
+Most Momentum-TWLO,TWLO,Financials-Most Momentum
+Best Value-BIIB,BIIB,Health Care-Best Value
+Best Value-BIO,BIO,Health Care-Best Value
+Best Value-CVS,CVS,Health Care-Best Value
+Fastest Growth-QDEL,QDEL,Health Care-Fastest Growth
+Fastest Growth-PODD,PODD,Health Care-Fastest Growth
+Fastest Growth-PRGO,PRGO,Health Care-Fastest Growth
+Most Momentum-LVGO,LVGO,Health Care-Most Momentum
+Most Momentum-IMMU,IMMU,Health Care-Most Momentum
+Most Momentum-MRNA,MRNA,Health Care-Most Momentum
+Best Value-EAF,EAF,Industrials-Best Value
+Best Value-AL,AL,Industrials-Best Value
+Best Value-HII,HII,Industrials-Best Value
+Fastest Growth-ENR,ENR,Industrials-Fastest Growth
+Fastest Growth-PWR,PWR,Industrials-Fastest Growth
+Fastest Growth-VRT,VRT,Industrials-Fastest Growth
+Most Momentum-GNRC,GNRC,Industrials-Most Momentum
+Most Momentum-FDX,FDX,Industrials-Most Momentum
+Most Momentum-VRT,VRT,Industrials-Most Momentum
+Best Value-NLOK,NLOK,Information Technology-Best Value
+Best Value-XRX,XRX,Information Technology-Best Value
+Best Value-NCR,NCR,Information Technology-Best Value
+Fastest Growth-CRM,CRM,Information Technology-Fastest Growth
+Fastest Growth-WEX,WEX,Information Technology-Fastest Growth
+Fastest Growth-NLOK,NLOK,Information Technology-Fastest Growth
+Most Momentum-ZM,ZM,Information Technology-Most Momentum
+Most Momentum-ZG,ZG,Information Technology-Most Momentum
+Most Momentum-TWLO,TWLO,Information Technology-Most Momentum
+Best Value-ARD,ARD,Materials-Best Value
+Best Value-MGM,MGM,Materials-Best Value
+Best Value-EBAY,EBAY,Materials-Best Value
+Fastest Growth-EXP,EXP,Materials-Fastest Growth
+Fastest Growth-RGLD,RGLD,Materials-Fastest Growth
+Fastest Growth-MDU,MDU,Materials-Fastest Growth
+Most Momentum-NEM,NEM,Materials-Most Momentum
+Most Momentum-FCX,FCX,Materials-Most Momentum
+Most Momentum-SMG,SMG,Materials-Most Momentum
+Best Value-BPYU,BPYU,Real Estate-Best Value
+Best Value-KIM,KIM,Real Estate-Best Value
+Best Value-EQC,EQC,Real Estate-Best Value
+Fastest Growth-KIM,KIM,Real Estate-Fastest Growth
+Fastest Growth-COLD,COLD,Real Estate-Fastest Growth
+Fastest Growth-ARE,ARE,Real Estate-Fastest Growth
+Most Momentum-CSGP,CSGP,Real Estate-Most Momentum
+Most Momentum-EQIX,EQIX,Real Estate-Most Momentum
+Most Momentum-SBAC,SBAC,Real Estate-Most Momentum
+Best Value-NRG,NRG,Utilities-Best Value
+Best Value-SRE,SRE,Utilities-Best Value
+Best Value-PPL,PPL,Utilities-Best Value
+Fastest Growth-ES,ES,Utilities-Fastest Growth
+Fastest Growth-SRE,SRE,Utilities-Fastest Growth
+Fastest Growth-PEG,PEG,Utilities-Fastest Growth
+Most Momentum-NEE,NEE,Utilities-Most Momentum
+Most Momentum-AWK,AWK,Utilities-Most Momentum
+Most Momentum-AES,AES,Utilities-Most Momentum

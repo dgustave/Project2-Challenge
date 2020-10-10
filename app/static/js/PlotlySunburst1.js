@@ -1,4 +1,4 @@
-Plotly.d3.csv('output_Final.csv', function(err, rows){
+Plotly.d3.csv('../../data/external/sunburst_scrape.csv', function(err, rows){
     function unpack(rows, key) {
     return rows.map(function(row) {return row[key]})
   }

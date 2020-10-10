@@ -14,7 +14,10 @@ Plotly.d3.csv('../../data/external/sunburst_scrape.csv', function(err, rows){
           "marker": {"line": {"width": 0.5,
 
                      "color" : "white"}},
-    }]
+                     
+    leaf: {opacity: 0.4},
+    leaves: {opacity: 0.4}
+  }]
    console.log(data)
     var layout = {margin: {l: 10, r: 0, b: 0, t:0},
       paper_bgcolor: 'rgba(0,0,0,0)'}

@@ -10,7 +10,10 @@ Plotly.d3.csv('../../data/external/sunburst_scrape.csv', function(err, rows){
           labels: unpack(rows, 'labels'),
           parents: unpack(rows, 'parents'),
           textposition: 'inside',
-          insidetextorientation: 'radial'
+          insidetextorientation: 'radial',
+          "marker": {"line": {"width": 0.5,
+
+                     "color" : "white"}},
     }]
    console.log(data)
     var layout = {margin: {l: 10, r: 0, b: 0, t:0},

@@ -8,6 +8,7 @@ Plotly.d3.csv('../../data/external/sunburst_scrape.csv', function(err, rows){
           maxdepth: 2,
           ids: unpack(rows, 'ids'),
           labels: unpack(rows, 'labels'),
+          exploded: true,
           parents: unpack(rows, 'parents'),
           textposition: 'inside',
           insidetextorientation: 'radial',
@@ -23,8 +24,8 @@ Plotly.d3.csv('../../data/external/sunburst_scrape.csv', function(err, rows){
     var layout = {margin: {l: 10, r: 0, b: 0, t:0},
       paper_bgcolor: 'rgba(0,0,0,0)', 
       sunburstcolorway:[
-        "#636EFA","#EF553B","#00CC96","#AB63FA","#19D3F3",
-        "#E763FA", "#FECB52","#FFA15A","#FF6692","#B6E880", "teal"
+        "#00A5E3","#8DD7BF","#FF96C5","#FF5768","#FFBF65",
+        "#FC6238", "#FFD872","#F2D4CC","#E77577","#6C88C4", "C05780"
       ],}
   
     Plotly.newPlot('tester', data, layout)

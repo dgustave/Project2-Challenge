@@ -8,11 +8,8 @@ from selenium.webdriver.support.ui import WebDriverWait
 from selenium.webdriver.support import expected_conditions as EC
 from selenium.common.exceptions import TimeoutException
 from selenium.webdriver.common.desired_capabilities import DesiredCapabilities
-from datetime import date, timedelta, datetime as dt
-from bs4 import BeautifulSoup as bs   
-
-
-
+from datetime import date, timedelta, datetime as dt  
+from pymongo import MongoClient 
 
 
 
@@ -34,5 +31,3 @@ class RemoteDriverStartService():
     def start_driver(self):
         return webdriver.Remote(command_executor='http://127.0.0.1:4444', 
                                 desired_capabilities=self.caps)
-# Set class equal to new capabilities:
-DesiredCapabilities = RemoteDriverStartService() 

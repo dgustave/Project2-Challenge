@@ -1,5 +1,3 @@
-import driver
-
 import os
 import html5lib
 import pandas as pd
@@ -10,30 +8,38 @@ from selenium.webdriver.support.ui import WebDriverWait
 from selenium.webdriver.support import expected_conditions as EC
 from selenium.common.exceptions import TimeoutException
 from selenium.webdriver.common.desired_capabilities import DesiredCapabilities
-from datetime import date, timedelta, datetime as dt
-from bs4 import BeautifulSoup as bs    
+from datetime import date, timedelta, datetime as dt  
+from pymongo import MongoClient 
+from itertools import cycle
+import numpy as np 
+# from kdriver import RemoteDriverStartService
 
-def Invsto_scrape():
+class RemoteDriverStartService():
+    options = webdriver.ChromeOptions()
+    # Set user app data to a new directory
+    options.add_argument("user-data-dir=C:\\Users\\Donley\\App Data\\Google\\Chrome\\Application\\User Data\\Kit")
+    options.add_experimental_option("Proxy", "null")
+    options.add_experimental_option("excludeSwitches", ["ignore-certificate-errors"])
+    # Create a download path for external data sources as default: 
+    options.add_experimental_option("prefs", {
+      "download.default_directory": r"C:\Users\Donley\Documents\GA_TECH\SUBMISSIONS\PROJECT2-CHALLENGE\data\external",
+      "download.prompt_for_download": False,
+      "download.directory_upgrade": True,
+      "safebrowsing.enabled": True
+    }),
+    # Add those optional features to capabilities
+    caps = options.to_capabilities()  
+    def start_driver(self):
+        return webdriver.Remote(command_executor='http://127.0.0.1:4444', 
+                                desired_capabilities=self.caps)
 
-#Step 2: Preparation
-    class RemoteDriverStartService():
-        options = webdriver.ChromeOptions()
-        # Set user app data to a new directory
-        options.add_argument("user-data-dir=C:\\Users\\Donley\\App Data\\Google\\Chrome\\Application\\User Data\\Kit")
-        options.add_experimental_option("Proxy", "null")
-        options.add_experimental_option("excludeSwitches", ["ignore-certificate-errors"])
-        # Create a download path for external data sources as default: 
-        options.add_experimental_option("prefs", {
-        "download.default_directory": r"C:\Users\Donley\Documents\GA_TECH\SUBMISSIONS\PROJECT2-CHALLENGE\data\external",
-        "download.prompt_for_download": False,
-        "download.directory_upgrade": True,
-        "safebrowsing.enabled": True
-        }),
-        # Add those optional features to capabilities
-        caps = options.to_capabilities()  
-        def start_driver(self):
-            return webdriver.Remote(command_executor='http://127.0.0.1:4444', 
-                                    desired_capabilities=self.caps)
+
+# Connect to MongoDB
+client =  MongoClient("mongodb://localhost:27017")
+db = client['investopedia']
+
+def invsto_scrape():
+
     # Set class equal to new capabilities:
     DesiredCapabilities = RemoteDriverStartService() 
 
@@ -62,6 +68,8 @@ def Invsto_scrape():
     ##Step 3: Find the IDs of the items we want to scrape for [5]
     # Start Grabbing Information from investopedia: 
     driver.get(investo)
+    driver.maximize_window()
+
     timeout = 30
     # Find an ID on the page and wait before executing anything until found: 
     try:
@@ -368,7 +376,10 @@ def Invsto_scrape():
 
     lists=[communications_bv_ticks,communications_fg_ticks,communications_mm_ticks, discretionary_bv_ticks,discretionary_fg_ticks,discretionary_mm_ticks,staples_bv_ticks,staples_fg_ticks,staples_mm_ticks,energy_bv_ticks,energy_fg_ticks,energy_mm_ticks, financial_bv_ticks,financial_fg_ticks,financial_mm_ticks,healthcare_bv_ticks,healthcare_fg_ticks,healthcare_mm_ticks,industrial_bv_ticks,industrial_fg_ticks,industrial_mm_ticks,tech_bv_ticks,tech_fg_ticks,tech_mm_ticks,materials_bv_ticks,materials_fg_ticks,materials_mm_ticks,real_estate_bv_ticks,real_estate_fg_ticks,real_estate_mm_ticks,utilities_bv_ticks,utilities_fg_ticks,utilities_mm_ticks]
     stock_list = [item for sublist in lists for item in sublist]
-    stock_list
+    
+    sector_collection = db['sector_stock_list']
+    # Insert collection
+    sector_collection.update_many({}, {"Sector Stocks": stock_list}, upsert = True)
 
     sp500_df=pd.read_csv('../data/external/sp500.csv')
     sector_l=sp500_df["S&P 500 & Sectors"].drop(sp500_df.index[0])
@@ -381,8 +392,6 @@ def Invsto_scrape():
     new_sector_df["labels"]=sector_l["S&P 500 & Sectors"]
     new_sector_df
 
-    from itertools import cycle
-    import numpy as np 
 
     perf_df= pd.DataFrame(np.arange(1,34), columns=['ids'])
     seq = cycle(['Best Value','Fastest Growth','Most Momentum'])
@@ -430,9 +439,18 @@ def Invsto_scrape():
     sunburst_df=sector_perf_df.append(stocks_df)
     sunburst_df
 
-    sunburst_df.to_csv('../data/external/sunburst_scrape.csv',index=False)
+    sunburst_collection = db['sunburst']
+    sunburst_df.reset_index(inplace=True)
+    sunburst_dict = sunburst_df.to_dict("records")
+    # Insert collection
+    sunburst_collection.update_many({}, sunburst_dict, upsert= True)
 
-driver.quit()
+    sunburst_df.to_csv('../data/external/sunburst_scrape.csv',index=False)
+    driver.quit()
+
+invsto_scrape()
+
+
 
 
 

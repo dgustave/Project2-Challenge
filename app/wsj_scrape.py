@@ -1,12 +1,46 @@
-import driver
+import os
+import html5lib
+import pandas as pd
+from selenium import webdriver                   
+from selenium.webdriver.common.keys import Keys   
+from selenium.webdriver.common.by import By
+from selenium.webdriver.support.ui import WebDriverWait
+from selenium.webdriver.support import expected_conditions as EC
+from selenium.common.exceptions import TimeoutException
+from selenium.webdriver.common.desired_capabilities import DesiredCapabilities
+from datetime import date, timedelta, datetime as dt  
+from pymongo import MongoClient 
+# from kdriver import RemoteDriverStartService
 
-import pandas
-import sqlalchemy
+class RemoteDriverStartService():
+    options = webdriver.ChromeOptions()
+    # Set user app data to a new directory
+    options.add_argument("user-data-dir=C:\\Users\\Donley\\App Data\\Google\\Chrome\\Application\\User Data\\Kit")
+    options.add_experimental_option("Proxy", "null")
+    options.add_experimental_option("excludeSwitches", ["ignore-certificate-errors"])
+    # Create a download path for external data sources as default: 
+    options.add_experimental_option("prefs", {
+      "download.default_directory": r"C:\Users\Donley\Documents\GA_TECH\SUBMISSIONS\PROJECT2-CHALLENGE\data\external",
+      "download.prompt_for_download": False,
+      "download.directory_upgrade": True,
+      "safebrowsing.enabled": True
+    }),
+    # Add those optional features to capabilities
+    caps = options.to_capabilities()  
+    def start_driver(self):
+        return webdriver.Remote(command_executor='http://127.0.0.1:4444', 
+                                desired_capabilities=self.caps)
+
+
+# Connect to MongoDB
+client =  MongoClient("mongodb://localhost:27017")
+db = client['WallStreet']
  
-# Create the engine to connect to the PostgreSQL database
-engine = sqlalchemy.create_engine('postgresql://postgres:postgres@localhost:5432/wsjScrape')
+
 
 def wsjScrape():
+        # Set class equal to new capabilities:
+    DesiredCapabilities = RemoteDriverStartService() 
 
     # Create variables for scraping: 
     wsj = "https://www.wsj.com/market-data/stocks?mod=nav_top_subsection"
@@ -32,6 +66,7 @@ def wsjScrape():
 
     # Get the URL
     driver.get(wsj)
+    driver.maximize_window()
 
     # Give it time to search for ID and allow the page time to load:
     timeout = 30
@@ -46,22 +81,27 @@ def wsjScrape():
     tables
 
     # Get table 5 and rename columns:
-    sp500_sectors_df = wsj_tables[5]
+    sp500_sectors_df = tables[5]
     sp500_sectors_df.columns = ["S&P 500 & Sectors", "% Change"]
     sp500_sectors_df.reset_index(drop=True, inplace=True)
     sp500_sectors_df
 
+
     sp500_sectors_df.to_csv(external+"sp500.csv", index=False)
 
     # Read data from CSV and load into a dataframe object
-    data = pandas.read_csv(external+"sp500.csv"')
+    data = pd.read_csv(external+"sp500.csv")
  
-# Write data into the table in PostgreSQL database
-    data.to_sql('WSJ',engine) 
+
 
     sp500_sectors_html = sp500_sectors_df.to_html()
     sp500_sectors_table = str(sp500_sectors_html)
     sp500_sectors_table
+
+    wsj_collection = db['SP500_Change']
+    # Insert collection
+    wsj_collection.update_many({},{"S&P 500": sp500_sectors_table}, upsert= True)
+
 
 
 
@@ -97,6 +137,9 @@ def wsjScrape():
     # list of links for sectors: 
     sector_links = [sp500_link, communication_link, discretionary_link, staples_link, energy_link, financials_link, health_link, industrials_link, information_Technology_link, materials_link, real_estate_link, utilities_link]
     sector_links
+
+    wsjlink_collection = db['SP500_Links']
+    wsjlink_collection.update_many({},{"Sector Links", sector_links}, upsert= True)
 
     # Get to Historical Data:
     driver.get(sp500_link[2])
@@ -135,4 +178,5 @@ def wsjScrape():
     driver.quit()
 
 
+wsjScrape()
 

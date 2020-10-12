@@ -22,7 +22,7 @@ class RemoteDriverStartService():
     options.add_experimental_option("excludeSwitches", ["ignore-certificate-errors"])
     # Create a download path for external data sources as default: 
     options.add_experimental_option("prefs", {
-      "download.default_directory": r"C:\Users\Donley\Documents\GA_TECH\SUBMISSIONS\PROJECT2-CHALLENGE\data\external",
+      "download.default_directory": r"C:\\Users\\Donley\\Documents\\GA_TECH\\SUBMISSIONS\\PROJECT2-CHALLENGE\\data\\external",
       "download.prompt_for_download": False,
       "download.directory_upgrade": True,
       "safebrowsing.enabled": True
@@ -34,14 +34,16 @@ class RemoteDriverStartService():
                                 desired_capabilities=self.caps)
 
 
-# Connect to MongoDB
-client =  MongoClient("mongodb://localhost:27017")
-db = client['investopedia']
+ # Set class equal to new capabilities:
+DesiredCapabilities = RemoteDriverStartService() 
 
 def invsto_scrape():
+    # Connect to MongoDB
+    client =  MongoClient("mongodb://localhost:27017")
+    db = client['investopedia']
 
-    # Set class equal to new capabilities:
-    DesiredCapabilities = RemoteDriverStartService() 
+    # # Set class equal to new capabilities:
+    # DesiredCapabilities = RemoteDriverStartService() 
 
     # Create variables for scraping: 
     investo = "https://www.investopedia.com/top-communications-stocks-4583180"
@@ -55,7 +57,7 @@ def invsto_scrape():
     current_path = os.getcwd()
 
     # save the .exe file under the same directory of the web-scrape python script.
-    Path = os.path.join(current_path, "chromedriver")
+    Path = os.path.join(current_path, "chromedriver.exe")
 
     # Initialize Chrome driver and start browser session controlled by automated test software under Kit profile.
     caps = webdriver.DesiredCapabilities.CHROME.copy()
@@ -63,14 +65,15 @@ def invsto_scrape():
     # caps = webdriver.DesiredCapabilities.CHROME.copy()
     # caps['acceptInsecureCerts'] = True
     # driver = webdriver.Chrome(options=options, desired_capabilities=caps)
-    driver = webdriver.Chrome(executable_path='chromedriver', desired_capabilities=caps)
+    driver = webdriver.Chrome(executable_path= Path, desired_capabilities=caps)
 
     ##Step 3: Find the IDs of the items we want to scrape for [5]
     # Start Grabbing Information from investopedia: 
-    driver.get(investo)
-    driver.maximize_window()
-
     timeout = 30
+    driver.maximize_window()
+    
+    driver.get(investo)
+
     # Find an ID on the page and wait before executing anything until found: 
     try:
         WebDriverWait(driver, timeout).until(EC.visibility_of_element_located((By.ID, "main_1-0")))
@@ -379,7 +382,7 @@ def invsto_scrape():
     
     sector_collection = db['sector_stock_list']
     # Insert collection
-    sector_collection.update_many({}, {"Sector Stocks": stock_list}, upsert = True)
+    sector_collection.update_many({}, {"$set": {"Sector Stocks": stock_list}}, upsert = True)
 
     sp500_df=pd.read_csv('../data/external/sp500.csv')
     sector_l=sp500_df["S&P 500 & Sectors"].drop(sp500_df.index[0])

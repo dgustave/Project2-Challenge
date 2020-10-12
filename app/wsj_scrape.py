@@ -100,7 +100,7 @@ def wsjScrape():
 
     wsj_collection = db['SP500_Change']
     # Insert collection
-    wsj_collection.update_many({},{"S&P 500": sp500_sectors_table}, upsert= True)
+    wsj_collection.update_many({},{'$set':{"S&P 500": sp500_sectors_table}}, upsert= True)
 
 
 
@@ -139,7 +139,7 @@ def wsjScrape():
     sector_links
 
     wsjlink_collection = db['SP500_Links']
-    wsjlink_collection.update_many({},{"Sector Links", sector_links}, upsert= True)
+    wsjlink_collection.update_many({},{'$set': {"Sector Links": sector_links}}, upsert= True)
 
     # Get to Historical Data:
     driver.get(sp500_link[2])

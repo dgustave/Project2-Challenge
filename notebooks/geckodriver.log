@@ -1,0 +1,98 @@
+1602599107214	geckodriver	INFO	Listening on 127.0.0.1:52224
+1602599110832	mozrunner::runner	INFO	Running command: "C:\\Program Files\\Mozilla Firefox\\firefox.exe" "--marionette" "-foreground" "-no-remote" "-profile" "C:\\WINDOWS\\TEMP\\rust_mozprofileJL1Gp3"
+[Parent 4200, Gecko_IOThread] WARNING: file /builds/worker/checkouts/gecko/ipc/chromium/src/base/process_util_win.cc, line 166
+console.error: SearchCache: "_readCacheFile: Error reading cache file:" (new Error("", "(unknown module)"))
+1602599167859	Marionette	INFO	Listening on port 52234
+1602599168487	Marionette	WARN	TLS certificate errors will be ignored for this session
+JavaScript error: resource://gre/modules/URIFixup.jsm, line 271: NS_ERROR_FAILURE: Should pass a non-null uri
+JavaScript warning: https://z.moatads.com/crossmediadcm87381835184/moatad.js#moatClientLevel2=4054317&moatClientLevel1=24484391&moatClientLevel3=278903358&zMoatADV=10227145&moatClientLevel4=136381868&zMoatSSTG=1, line 262: Failed to create WebGL context: WebGL is currently disabled.
+JavaScript warning: https://z.moatads.com/crossmediadcm87381835184/moatad.js#moatClientLevel2=4054317&moatClientLevel1=24484391&moatClientLevel3=278903358&zMoatADV=10227145&moatClientLevel4=136381868&zMoatSSTG=1, line 262: Failed to create WebGL context: WebGL is currently disabled.
+JavaScript warning: https://pagead2.googlesyndication.com/bg/CrE1yZ0XDC5ogwV0DdLcRYcLenmcbaA1q0bi-X3sD0w.js line 1 > eval line 53 > eval line 1 > eval, line 1: Failed to create WebGL context: WebGL is currently disabled.
+JavaScript warning: https://pagead2.googlesyndication.com/bg/CrE1yZ0XDC5ogwV0DdLcRYcLenmcbaA1q0bi-X3sD0w.js line 1 > eval line 5994 > eval, line 1: Failed to create WebGL context: WebGL is currently disabled.
+JavaScript warning: https://pagead2.googlesyndication.com/bg/CrE1yZ0XDC5ogwV0DdLcRYcLenmcbaA1q0bi-X3sD0w.js line 1 > eval line 1540 > eval, line 1: Failed to create WebGL context: WebGL is currently disabled.
+JavaScript warning: https://pagead2.googlesyndication.com/bg/CrE1yZ0XDC5ogwV0DdLcRYcLenmcbaA1q0bi-X3sD0w.js line 1 > eval line 5009 > eval line 1 > eval, line 1: Failed to create WebGL context: WebGL is currently disabled.
+JavaScript warning: https://pagead2.googlesyndication.com/bg/CrE1yZ0XDC5ogwV0DdLcRYcLenmcbaA1q0bi-X3sD0w.js line 1 > eval line 1369 > eval, line 1: Failed to create WebGL context: WebGL is currently disabled.
+JavaScript warning: https://pagead2.googlesyndication.com/bg/CrE1yZ0XDC5ogwV0DdLcRYcLenmcbaA1q0bi-X3sD0w.js line 1 > eval line 4392 > eval line 1 > eval, line 1: Failed to create WebGL context: WebGL is currently disabled.
+JavaScript warning: https://pagead2.googlesyndication.com/bg/CrE1yZ0XDC5ogwV0DdLcRYcLenmcbaA1q0bi-X3sD0w.js line 1 > eval line 3761 > eval, line 1: Failed to create WebGL context: WebGL is currently disabled.
+JavaScript warning: https://pagead2.googlesyndication.com/bg/CrE1yZ0XDC5ogwV0DdLcRYcLenmcbaA1q0bi-X3sD0w.js line 1 > eval line 5584 > eval line 1 > eval, line 1: Failed to create WebGL context: WebGL is currently disabled.
+JavaScript warning: https://pagead2.googlesyndication.com/bg/CrE1yZ0XDC5ogwV0DdLcRYcLenmcbaA1q0bi-X3sD0w.js line 1 > eval line 746 > eval line 1 > eval, line 1: Failed to create WebGL context: WebGL is currently disabled.
+JavaScript warning: https://pagead2.googlesyndication.com/bg/kdMDGALxb7rWjfGZ5E6rkNPOuNaXBXqM-bDMVcqad5I.js line 1 > eval line 5366 > eval, line 1: Failed to create WebGL context: WebGL is currently disabled.
+1602599398855	Marionette	INFO	Stopped listening on port 52234
+1602599487197	geckodriver	INFO	Listening on 127.0.0.1:52646
+1602599490253	mozrunner::runner	INFO	Running command: "C:\\Program Files\\Mozilla Firefox\\firefox.exe" "--marionette" "-foreground" "-no-remote" "-profile" "C:\\WINDOWS\\TEMP\\rust_mozprofileqmY5u6"
+console.error: SearchCache: "_readCacheFile: Error reading cache file:" (new Error("", "(unknown module)"))
+console.error: "Could not write session state file " (new Error("_initWorker called too early! Please read the session file from disk first.", "resource:///modules/sessionstore/SessionFile.jsm", 375)) "_initWorker/<@resource:///modules/sessionstore/SessionFile.jsm:375:15\n_initWorker@resource:///modules/sessionstore/SessionFile.jsm:368:12\n_postToWorker@resource:///modules/sessionstore/SessionFile.jsm:410:16\nwrite@resource:///modules/sessionstore/SessionFile.jsm:448:24\nwrite@resource:///modules/sessionstore/SessionFile.jsm:75:32\n_writeState@resource:///modules/sessionstore/SessionSaver.jsm:360:24\n_saveState@resource:///modules/sessionstore/SessionSaver.jsm:294:17\n_saveStateAsync@resource:///modules/sessionstore/SessionSaver.jsm:344:10\nsaveStateAsyncWhenIdle@resource:///modules/sessionstore/SessionSaver.jsm:191:14\ncallback@resource://gre/modules/Timer.jsm:127:16\n"
+1602599497976	Marionette	INFO	Listening on port 52654
+1602599498078	Marionette	WARN	TLS certificate errors will be ignored for this session
+JavaScript warning: https://pagead2.googlesyndication.com/bg/CrE1yZ0XDC5ogwV0DdLcRYcLenmcbaA1q0bi-X3sD0w.js line 1 > eval line 6507 > eval line 1 > eval, line 1: Failed to create WebGL context: WebGL is currently disabled.
+JavaScript warning: https://pagead2.googlesyndication.com/bg/CrE1yZ0XDC5ogwV0DdLcRYcLenmcbaA1q0bi-X3sD0w.js line 1 > eval line 5224 > eval, line 1: Failed to create WebGL context: WebGL is currently disabled.
+JavaScript warning: https://pagead2.googlesyndication.com/bg/CrE1yZ0XDC5ogwV0DdLcRYcLenmcbaA1q0bi-X3sD0w.js line 1 > eval line 926 > eval, line 1: Failed to create WebGL context: WebGL is currently disabled.
+JavaScript warning: https://pagead2.googlesyndication.com/bg/CrE1yZ0XDC5ogwV0DdLcRYcLenmcbaA1q0bi-X3sD0w.js line 1 > eval line 7709 > eval, line 1: Failed to create WebGL context: WebGL is currently disabled.
+JavaScript warning: https://pagead2.googlesyndication.com/bg/CrE1yZ0XDC5ogwV0DdLcRYcLenmcbaA1q0bi-X3sD0w.js line 1 > eval line 2630 > eval line 1 > eval, line 1: Failed to create WebGL context: WebGL is currently disabled.
+JavaScript warning: https://pagead2.googlesyndication.com/bg/CrE1yZ0XDC5ogwV0DdLcRYcLenmcbaA1q0bi-X3sD0w.js line 1 > eval line 2162 > eval, line 1: Failed to create WebGL context: WebGL is currently disabled.
+JavaScript warning: https://pagead2.googlesyndication.com/bg/CrE1yZ0XDC5ogwV0DdLcRYcLenmcbaA1q0bi-X3sD0w.js line 1 > eval line 2584 > eval, line 1: Failed to create WebGL context: WebGL is currently disabled.
+JavaScript warning: https://pagead2.googlesyndication.com/bg/CrE1yZ0XDC5ogwV0DdLcRYcLenmcbaA1q0bi-X3sD0w.js line 1 > eval line 1632 > eval, line 1: Failed to create WebGL context: WebGL is currently disabled.
+JavaScript warning: https://pagead2.googlesyndication.com/bg/kdMDGALxb7rWjfGZ5E6rkNPOuNaXBXqM-bDMVcqad5I.js line 1 > eval line 6786 > eval, line 1: Failed to create WebGL context: WebGL is currently disabled.
+JavaScript warning: https://pagead2.googlesyndication.com/bg/CrE1yZ0XDC5ogwV0DdLcRYcLenmcbaA1q0bi-X3sD0w.js line 1 > eval line 3620 > eval, line 1: Failed to create WebGL context: WebGL is currently disabled.
+JavaScript warning: https://pagead2.googlesyndication.com/bg/kdMDGALxb7rWjfGZ5E6rkNPOuNaXBXqM-bDMVcqad5I.js line 1 > eval line 2858 > eval, line 1: Failed to create WebGL context: WebGL is currently disabled.
+[Parent 14756, Gecko_IOThread] WARNING: file /builds/worker/checkouts/gecko/ipc/chromium/src/base/process_util_win.cc, line 166
+[Parent 14756, Gecko_IOThread] WARNING: file /builds/worker/checkouts/gecko/ipc/chromium/src/base/process_util_win.cc, line 166
+[Parent 14756, Gecko_IOThread] WARNING: file /builds/worker/checkouts/gecko/ipc/chromium/src/base/process_util_win.cc, line 166
+1602601581483	Marionette	INFO	Stopped listening on port 52654
+1602601663806	geckodriver	INFO	Listening on 127.0.0.1:54462
+1602601666849	mozrunner::runner	INFO	Running command: "C:\\Program Files\\Mozilla Firefox\\firefox.exe" "--marionette" "-foreground" "-no-remote" "-profile" "C:\\WINDOWS\\TEMP\\rust_mozprofile3YhLKU"
+console.error: SearchCache: "_readCacheFile: Error reading cache file:" (new Error("", "(unknown module)"))
+1602601678600	Marionette	INFO	Listening on port 54471
+1602601679683	Marionette	WARN	TLS certificate errors will be ignored for this session
+JavaScript warning: https://pagead2.googlesyndication.com/bg/CrE1yZ0XDC5ogwV0DdLcRYcLenmcbaA1q0bi-X3sD0w.js line 1 > eval line 6169 > eval line 1 > eval, line 1: Failed to create WebGL context: WebGL is currently disabled.
+JavaScript warning: https://pagead2.googlesyndication.com/bg/CrE1yZ0XDC5ogwV0DdLcRYcLenmcbaA1q0bi-X3sD0w.js line 1 > eval line 2345 > eval line 1 > eval, line 1: Failed to create WebGL context: WebGL is currently disabled.
+JavaScript warning: https://pagead2.googlesyndication.com/bg/CrE1yZ0XDC5ogwV0DdLcRYcLenmcbaA1q0bi-X3sD0w.js line 1 > eval line 2525 > eval, line 1: Failed to create WebGL context: WebGL is currently disabled.
+JavaScript warning: https://pagead2.googlesyndication.com/bg/CrE1yZ0XDC5ogwV0DdLcRYcLenmcbaA1q0bi-X3sD0w.js line 1 > eval line 7635 > eval, line 1: Failed to create WebGL context: WebGL is currently disabled.
+JavaScript warning: https://pagead2.googlesyndication.com/bg/CrE1yZ0XDC5ogwV0DdLcRYcLenmcbaA1q0bi-X3sD0w.js line 1 > eval line 939 > eval line 1 > eval, line 1: Failed to create WebGL context: WebGL is currently disabled.
+JavaScript warning: https://pagead2.googlesyndication.com/bg/CrE1yZ0XDC5ogwV0DdLcRYcLenmcbaA1q0bi-X3sD0w.js line 1 > eval line 5396 > eval line 1 > eval, line 1: Failed to create WebGL context: WebGL is currently disabled.
+JavaScript warning: https://pagead2.googlesyndication.com/bg/CrE1yZ0XDC5ogwV0DdLcRYcLenmcbaA1q0bi-X3sD0w.js line 1 > eval line 2366 > eval line 1 > eval, line 1: Failed to create WebGL context: WebGL is currently disabled.
+JavaScript warning: https://pagead2.googlesyndication.com/bg/CrE1yZ0XDC5ogwV0DdLcRYcLenmcbaA1q0bi-X3sD0w.js line 1 > eval line 7472 > eval, line 1: Failed to create WebGL context: WebGL is currently disabled.
+JavaScript warning: https://pagead2.googlesyndication.com/bg/CrE1yZ0XDC5ogwV0DdLcRYcLenmcbaA1q0bi-X3sD0w.js line 1 > eval line 4330 > eval, line 1: Failed to create WebGL context: WebGL is currently disabled.
+JavaScript warning: https://pagead2.googlesyndication.com/bg/CrE1yZ0XDC5ogwV0DdLcRYcLenmcbaA1q0bi-X3sD0w.js line 1 > eval line 1776 > eval, line 1: Failed to create WebGL context: WebGL is currently disabled.
+JavaScript warning: https://pagead2.googlesyndication.com/bg/CrE1yZ0XDC5ogwV0DdLcRYcLenmcbaA1q0bi-X3sD0w.js line 1 > eval line 2493 > eval, line 1: Failed to create WebGL context: WebGL is currently disabled.
+1602602006235	Marionette	INFO	Stopped listening on port 54471
+1602602063656	geckodriver	INFO	Listening on 127.0.0.1:55214
+1602602066593	mozrunner::runner	INFO	Running command: "C:\\Program Files\\Mozilla Firefox\\firefox.exe" "--marionette" "-foreground" "-no-remote" "-profile" "C:\\WINDOWS\\TEMP\\rust_mozprofilezdP7Cx"
+console.error: SearchCache: "_readCacheFile: Error reading cache file:" (new Error("", "(unknown module)"))
+1602602072553	Marionette	INFO	Listening on port 55223
+1602602072813	Marionette	WARN	TLS certificate errors will be ignored for this session
+JavaScript warning: https://pagead2.googlesyndication.com/bg/CrE1yZ0XDC5ogwV0DdLcRYcLenmcbaA1q0bi-X3sD0w.js line 1 > eval line 5436 > eval, line 1: Failed to create WebGL context: WebGL is currently disabled.
+JavaScript warning: https://pagead2.googlesyndication.com/bg/CrE1yZ0XDC5ogwV0DdLcRYcLenmcbaA1q0bi-X3sD0w.js line 1 > eval line 2717 > eval line 1 > eval, line 1: Failed to create WebGL context: WebGL is currently disabled.
+JavaScript warning: https://pagead2.googlesyndication.com/bg/CrE1yZ0XDC5ogwV0DdLcRYcLenmcbaA1q0bi-X3sD0w.js line 1 > eval line 3308 > eval, line 1: Failed to create WebGL context: WebGL is currently disabled.
+JavaScript warning: https://pagead2.googlesyndication.com/bg/CrE1yZ0XDC5ogwV0DdLcRYcLenmcbaA1q0bi-X3sD0w.js line 1 > eval line 6898 > eval, line 1: Failed to create WebGL context: WebGL is currently disabled.
+JavaScript warning: https://pagead2.googlesyndication.com/bg/CrE1yZ0XDC5ogwV0DdLcRYcLenmcbaA1q0bi-X3sD0w.js line 1 > eval line 5123 > eval line 1 > eval, line 1: Failed to create WebGL context: WebGL is currently disabled.
+JavaScript warning: https://pagead2.googlesyndication.com/bg/CrE1yZ0XDC5ogwV0DdLcRYcLenmcbaA1q0bi-X3sD0w.js line 1 > eval line 6812 > eval line 1 > eval, line 1: Failed to create WebGL context: WebGL is currently disabled.
+JavaScript warning: https://pagead2.googlesyndication.com/bg/CrE1yZ0XDC5ogwV0DdLcRYcLenmcbaA1q0bi-X3sD0w.js line 1 > eval line 5715 > eval, line 1: Failed to create WebGL context: WebGL is currently disabled.
+JavaScript warning: https://pagead2.googlesyndication.com/bg/CrE1yZ0XDC5ogwV0DdLcRYcLenmcbaA1q0bi-X3sD0w.js line 1 > eval line 5463 > eval, line 1: Failed to create WebGL context: WebGL is currently disabled.
+1602602388149	Marionette	INFO	Stopped listening on port 55223
+1602602432482	geckodriver	INFO	Listening on 127.0.0.1:55791
+1602602435421	mozrunner::runner	INFO	Running command: "C:\\Program Files\\Mozilla Firefox\\firefox.exe" "--marionette" "-foreground" "-no-remote" "-profile" "C:\\WINDOWS\\TEMP\\rust_mozprofile8D6IOh"
+JavaScript error: resource://gre/modules/XULStore.jsm, line 66: Error: Can't find profile directory.
+console.error: SearchCache: "_readCacheFile: Error reading cache file:" (new Error("", "(unknown module)"))
+1602602452725	Marionette	INFO	Listening on port 55801
+1602602452774	Marionette	WARN	TLS certificate errors will be ignored for this session
+Can't find symbol 'eglSwapBuffersWithDamageEXT'.
+JavaScript error: https://www.gstatic.com/mysidia/73cae2ad2e9438ed62e655fefa4fd91a.js?tag=video_mra/web_fig_och, line 179: SecurityError: The operation is insecure.
+JavaScript error: https://cdn.ampproject.org/rtv/012009282107000/v0/amp-analytics-0.1.js, line 135: NS_ERROR_NOT_INITIALIZED: 
+1602613277891	geckodriver	INFO	Listening on 127.0.0.1:61784
+1602613281046	mozrunner::runner	INFO	Running command: "C:\\Program Files\\Mozilla Firefox\\firefox.exe" "--marionette" "-foreground" "-no-remote" "-profile" "C:\\WINDOWS\\TEMP\\rust_mozprofilelsQ3wb"
+JavaScript error: resource://gre/modules/XULStore.jsm, line 66: Error: Can't find profile directory.
+console.error: SearchCache: "_readCacheFile: Error reading cache file:" (new Error("", "(unknown module)"))
+1602613331206	Marionette	INFO	Listening on port 61795
+1602613331549	Marionette	WARN	TLS certificate errors will be ignored for this session
+1602613338698	geckodriver	INFO	Listening on 127.0.0.1:61886
+1602613341175	mozrunner::runner	INFO	Running command: "C:\\Program Files\\Mozilla Firefox\\firefox.exe" "--marionette" "-foreground" "-no-remote" "-profile" "C:\\WINDOWS\\TEMP\\rust_mozprofilefjqCmz"
+JavaScript error: resource://gre/modules/XULStore.jsm, line 66: Error: Can't find profile directory.
+console.error: SearchCache: "_readCacheFile: Error reading cache file:" (new Error("", "(unknown module)"))
+console.error: "Could not write session state file " (new Error("_initWorker called too early! Please read the session file from disk first.", "resource:///modules/sessionstore/SessionFile.jsm", 375)) "_initWorker/<@resource:///modules/sessionstore/SessionFile.jsm:375:15\n_initWorker@resource:///modules/sessionstore/SessionFile.jsm:368:12\n_postToWorker@resource:///modules/sessionstore/SessionFile.jsm:410:16\nwrite@resource:///modules/sessionstore/SessionFile.jsm:448:24\nwrite@resource:///modules/sessionstore/SessionFile.jsm:75:32\n_writeState@resource:///modules/sessionstore/SessionSaver.jsm:360:24\n_saveState@resource:///modules/sessionstore/SessionSaver.jsm:294:17\n_saveStateAsync@resource:///modules/sessionstore/SessionSaver.jsm:344:10\nsaveStateAsyncWhenIdle@resource:///modules/sessionstore/SessionSaver.jsm:191:14\ncallback@resource://gre/modules/Timer.jsm:127:16\n"
+1602613358096	Marionette	INFO	Listening on port 61895
+1602613358543	Marionette	WARN	TLS certificate errors will be ignored for this session
+JavaScript error: https://www.gstatic.com/mysidia/73cae2ad2e9438ed62e655fefa4fd91a.js?tag=video_mra/web_fig_och, line 179: SecurityError: The operation is insecure.
+Can't find symbol 'eglSwapBuffersWithDamageEXT'.
+1602618770284	Marionette	INFO	Stopped listening on port 61895
+[Parent 16524, Gecko_IOThread] WARNING: file /builds/worker/checkouts/gecko/ipc/chromium/src/base/process_util_win.cc, line 166

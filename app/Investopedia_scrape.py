@@ -1,5 +1,4 @@
 import os
-import html5lib
 import pandas as pd
 from selenium import webdriver                   
 from selenium.webdriver.common.keys import Keys   
@@ -14,28 +13,28 @@ from itertools import cycle
 import numpy as np 
 # from kdriver import RemoteDriverStartService
 
-class RemoteDriverStartService():
-    options = webdriver.ChromeOptions()
-    # Set user app data to a new directory
-    options.add_argument("user-data-dir=C:\\Users\\Donley\\App Data\\Google\\Chrome\\Application\\User Data\\Kit")
-    options.add_experimental_option("Proxy", "null")
-    options.add_experimental_option("excludeSwitches", ["ignore-certificate-errors"])
-    # Create a download path for external data sources as default: 
-    options.add_experimental_option("prefs", {
-      "download.default_directory": r"C:\\Users\\Donley\\Documents\\GA_TECH\\SUBMISSIONS\\PROJECT2-CHALLENGE\\data\\external",
-      "download.prompt_for_download": False,
-      "download.directory_upgrade": True,
-      "safebrowsing.enabled": True
-    }),
-    # Add those optional features to capabilities
-    caps = options.to_capabilities()  
-    def start_driver(self):
-        return webdriver.Remote(command_executor='http://127.0.0.1:4444', 
-                                desired_capabilities=self.caps)
+# class RemoteDriverStartService():
+#     options = webdriver.ChromeOptions()
+#     # Set user app data to a new directory
+#     options.add_argument("user-data-dir=C:\\Users\\Donley\\App Data\\Google\\Chrome\\Application\\User Data\\Kit")
+#     options.add_experimental_option("Proxy", "null")
+#     options.add_experimental_option("excludeSwitches", ["ignore-certificate-errors"])
+#     # Create a download path for external data sources as default: 
+#     options.add_experimental_option("prefs", {
+#       "download.default_directory": r"C:\\Users\\Donley\\Documents\\GA_TECH\\SUBMISSIONS\\PROJECT2-CHALLENGE\\data\\external",
+#       "download.prompt_for_download": False,
+#       "download.directory_upgrade": True,
+#       "safebrowsing.enabled": True
+#     }),
+#     # Add those optional features to capabilities
+#     caps = options.to_capabilities()  
+#     def start_driver(self):
+#         return webdriver.Remote(command_executor='http://127.0.0.1:4444', 
+#                                 desired_capabilities=self.caps)
 
 
- # Set class equal to new capabilities:
-DesiredCapabilities = RemoteDriverStartService() 
+#  # Set class equal to new capabilities:
+# DesiredCapabilities = RemoteDriverStartService() 
 
 def invsto_scrape():
     # Connect to MongoDB
@@ -57,26 +56,26 @@ def invsto_scrape():
     current_path = os.getcwd()
 
     # save the .exe file under the same directory of the web-scrape python script.
-    Path = os.path.join(current_path, "chromedriver.exe")
+    # driver = webdriver.Firefox(executable_path='C:\Python\geckodriver.exe')
+    Path = os.path.join(current_path, "geckodriver.exe")
 
     # Initialize Chrome driver and start browser session controlled by automated test software under Kit profile.
-    caps = webdriver.DesiredCapabilities.CHROME.copy()
-    caps['acceptInsecureCerts'] = True
+    # caps = webdriver.DesiredCapabilities.CHROME.copy()
+    # caps['acceptInsecureCerts'] = True
     # caps = webdriver.DesiredCapabilities.CHROME.copy()
     # caps['acceptInsecureCerts'] = True
     # driver = webdriver.Chrome(options=options, desired_capabilities=caps)
-    driver = webdriver.Chrome(executable_path= Path, desired_capabilities=caps)
+    driver = webdriver.Firefox(executable_path= "geckodriver.exe")
 
     ##Step 3: Find the IDs of the items we want to scrape for [5]
     # Start Grabbing Information from investopedia: 
-    timeout = 30
     driver.maximize_window()
     
     driver.get(investo)
 
     # Find an ID on the page and wait before executing anything until found: 
     try:
-        WebDriverWait(driver, timeout).until(EC.visibility_of_element_located((By.ID, "main_1-0")))
+        WebDriverWait(driver, 10).until(EC.visibility_of_element_located((By.ID, "main_1-0")))
     except TimeoutException:
         driver.quit()
 
@@ -106,7 +105,10 @@ def invsto_scrape():
     communications_mm_ticks
 
     discretionary = driver.find_elements(By.CSS_SELECTOR, '#journey-nav__sublist_1-0 > li:nth-child(3) > a')
-    discretionary
+    try:
+        WebDriverWait(driver, 10).until(EC.visibility_of_element_located((By.ID, "journey-nav-header_1-0")))
+    except TimeoutException:
+        driver.quit()
 
     discretionary[0].click() 
 
@@ -134,8 +136,14 @@ def invsto_scrape():
     del discretionary_mm_ticks[-2:]
     discretionary_mm_ticks
 
-    staples = driver.find_elements(By.CSS_SELECTOR, '#journey-nav__sublist_1-0 > li:nth-child(4) > a')
+    try:
+        WebDriverWait(driver, 10).until(EC.visibility_of_element_located((By.NAME, "Top Consumer Staples Stocks")))
+    except TimeoutException:
+        driver.quit()
+
+    staples = driver.find_elements(By.NAME, "Top Consumer Staples Stocks")
     staples[0].click()
+
 
     stable = driver.find_element_by_id("main_1-0").get_attribute('outerHTML')
     stables  = pd.read_html(stable)
@@ -162,7 +170,12 @@ def invsto_scrape():
     staples_mm_ticks
 
     energy = driver.find_elements(By.CSS_SELECTOR, '#journey-nav__sublist_1-0 > li:nth-child(5) > a')
+    try:
+        WebDriverWait(driver, 10).until(EC.visibility_of_element_located((By.XPATH, "/html/body/main/div[1]/div/div[1]/ul/li[2]/ul/li[5]/a")))
+    except TimeoutException:
+        driver.quit()
     energy[0].click()
+    
 
     etable = driver.find_element_by_id("main_1-0").get_attribute('outerHTML')
     etables  = pd.read_html(etable)
@@ -189,7 +202,13 @@ def invsto_scrape():
     energy_mm_ticks
 
     financial = driver.find_elements(By.CSS_SELECTOR, '#journey-nav__sublist_1-0 > li:nth-child(6) > a')
+    try:
+        WebDriverWait(driver, 10).until(EC.visibility_of_element_located((By.ID, "journey-nav-header_1-0")))
+    except TimeoutException:
+        driver.quit()
     financial[0].click()
+
+    
 
     ftable = driver.find_element_by_id("main_1-0").get_attribute('outerHTML')
     ftables  = pd.read_html(ftable)
@@ -216,7 +235,12 @@ def invsto_scrape():
     financial_mm_ticks
 
     healthcare = driver.find_elements(By.CSS_SELECTOR, '#journey-nav__sublist_1-0 > li:nth-child(7) > a')
+    try:
+        WebDriverWait(driver, 10).until(EC.visibility_of_element_located((By.ID, "journey-nav-header_1-0")))
+    except TimeoutException:
+        driver.quit()
     healthcare[0].click()
+    
 
     htable = driver.find_element_by_id("main_1-0").get_attribute('outerHTML')
     htables  = pd.read_html(htable)
@@ -243,7 +267,12 @@ def invsto_scrape():
     healthcare_mm_ticks
 
     industrial = driver.find_elements(By.CSS_SELECTOR, '#journey-nav__sublist_1-0 > li:nth-child(8) > a')
+    try:
+        WebDriverWait(driver, 10).until(EC.visibility_of_element_located((By.ID, "journey-nav-header_1-0")))
+    except TimeoutException:
+        driver.quit()
     industrial[0].click()
+    
 
     intable = driver.find_element_by_id("main_1-0").get_attribute('outerHTML')
     intables  = pd.read_html(intable)
@@ -270,7 +299,13 @@ def invsto_scrape():
     industrial_mm_ticks
 
     materials = driver.find_elements(By.CSS_SELECTOR, '#journey-nav__sublist_1-0 > li:nth-child(9) > a')
+    try:
+        WebDriverWait(driver, 10).until(EC.visibility_of_element_located((By.ID, "journey-nav-header_1-0")))
+    except TimeoutException:
+        driver.quit()
     materials[0].click()
+
+    
 
     motable = driver.find_element_by_id("main_1-0").get_attribute('outerHTML')
     motables  = pd.read_html(motable)
@@ -297,6 +332,10 @@ def invsto_scrape():
     materials_mm_ticks
 
     real_estate = driver.find_elements(By.CSS_SELECTOR, '#journey-nav__sublist_1-0 > li:nth-child(10) > a')
+    try:
+        WebDriverWait(driver, 10).until(EC.visibility_of_element_located((By.ID, "journey-nav-header_1-0")))
+    except TimeoutException:
+        driver.quit()
     real_estate[0].click()
 
     retable = driver.find_element_by_id("main_1-0").get_attribute('outerHTML')
@@ -324,6 +363,10 @@ def invsto_scrape():
     real_estate_mm_ticks
 
     tech = driver.find_elements(By.CSS_SELECTOR, '#journey-nav__sublist_1-0 > li:nth-child(11) > a')
+    try:
+        WebDriverWait(driver, 10).until(EC.visibility_of_element_located((By.ID, "journey-nav-header_1-0")))
+    except TimeoutException:
+        driver.quit()
     tech[0].click()
 
     tetable = driver.find_element_by_id("main_1-0").get_attribute('outerHTML')
@@ -351,6 +394,10 @@ def invsto_scrape():
     tech_mm_ticks
 
     utilities = driver.find_elements(By.CSS_SELECTOR, '#journey-nav__sublist_1-0 > li:nth-child(12) > a')
+    try:
+        WebDriverWait(driver, 10).until(EC.visibility_of_element_located((By.ID, "journey-nav-header_1-0")))
+    except TimeoutException:
+        driver.quit()
     utilities[0].click()
 
     utable = driver.find_element_by_id("main_1-0").get_attribute('outerHTML')

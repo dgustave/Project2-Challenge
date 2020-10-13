@@ -112,12 +112,15 @@
             <span class="navbar-toggler-icon icon-bar"></span>
           </button>
           <div class="form">
-              <form action="" method="post">
+              <form action="/Stock Select" method="post">
                 <div class="input-group no-border">
-                  <input type="text" placeholder="Stock" name="stock" value="{{request.form.stock}}">
-                  <input type="date" placeholder="Start Date (YYYY-MM-DD)" name="start" value="{{request.form.startdate}}">
-                  <input type="date" placeholder="End Date (YYYY-MM-DD)" name="end" value="{{request.form.enddate}}">
-                    <input class="btn btn-default" type="Submit" value="Stock Select">
+                <label for="symb">Stock Symbol</label><br>
+                  <input type="text" name="symb">
+                  <label for="start">Start Date</label><br>
+                  <input type="date" name="start">
+                  <label for="end">End Date</label><br>
+                  <input type="date" name="end">
+                    <input class="btn btn-default" type="Submit" value="Submit">
                   <div class="ripple-container"></div>
                 </form>
               </div>

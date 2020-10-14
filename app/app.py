@@ -19,15 +19,15 @@ def index():
 def profile():
     return render_template('profile.html')
 
-@app.route('/notifications/')
-def notifications():
-    return render_template('notifications.html')
+@app.route('/Searched_Stock/')
+def Searched_Stock():
+    return render_template('Stocksearch.html')
 
 import ETL
 @app.route('/Stock_Select', methods=['POST']) 
 def Stock_Select(): 
     ETL.Stock_Select()
-    return render_template('index.html')   
+    return render_template('Stocksearch.html')   
 
 
 if __name__ == "__main__":

@@ -4,10 +4,6 @@ from flask_pymongo import PyMongo
 from flask_assets import Environment, Bundle
 from flask_scss import Scss
 from datetime import datetime
-import yfinance as yf
-import pandas as pd
-import matplotlib.pyplot as plt
-import seaborn
 import os
 
 
@@ -21,7 +17,7 @@ def index():
 
 @app.route('/Stock_Select', methods=['POST']) 
 def Stock_Select(): 
-   
+   if request.method == 'POST':
     stock = request.form.get('symb') 
     stockstdate = request.form.get('start')
     stockedate = request.form.get('end')
@@ -37,8 +33,9 @@ def Stock_Select():
     data_df.index.name = 'id'
     data_df.index = data_df.index.map(str)
 
-    data_df.to_csv('../data/external/StockETL.csv', index = False)
 
+    #data_df.to_csv('../data/external/StockETL.csv', index = False)
+    #return redirect('index.html')
 
 if __name__ == "__main__":
     app.config['TEMPLATES_AUTO_RELOAD'] = True

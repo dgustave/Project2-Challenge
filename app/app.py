@@ -11,17 +11,23 @@ import os
 # Create an instance of Flask app
 app = Flask(__name__)
 
-@app.route("/")
+@app.route('/')
 def index():
     return render_template('index.html')
 
+@app.route('/profile/')
+def profile():
+    return render_template('profile.html')
 
+@app.route('/notifications/')
+def notifications():
+    return render_template('notifications.html')
 
 import ETL
-@app.route("/Stock_Select", methods=['POST']) 
+@app.route('/Stock_Select', methods=['POST']) 
 def Stock_Select(): 
     ETL.Stock_Select()
-    return render_template("index.html")   
+    return render_template('index.html')   
 
 
 if __name__ == "__main__":

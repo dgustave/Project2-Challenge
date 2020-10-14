@@ -18,23 +18,11 @@ def index():
 
 
 import ETL
-@app.route('/Stock_Select', methods=['POST']) 
+@app.route("/Stock_Select", methods=['POST']) 
 def Stock_Select(): 
     ETL.Stock_Select()
-    
-    #stockv = yf.Ticker(stock)
-    #sdate = (stockstdate)
-    #edate = (stockedate)
+    return render_template("index.html")   
 
-    #data_df = yf.download(stock, start=sdate, end=edate)
-
-    #data_df.index = [x for x in range(1, len(data_df.values)+1)]
-    #data_df.index.name = 'id'
-    #data_df.index = data_df.index.map(str)
-
-
-    #data_df.to_csv('../data/external/StockETL.csv', index = False)
-    #return redirect('index.html')
 
 if __name__ == "__main__":
     app.config['TEMPLATES_AUTO_RELOAD'] = True

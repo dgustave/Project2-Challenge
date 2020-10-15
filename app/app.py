@@ -1,6 +1,6 @@
 # Import Dependencies 
 from flask import Flask, request, render_template, redirect,jsonify
-# from flask_assets import Environment, Bundle
+from flask_assets import Environment, Bundle
 from flask_scss import Scss
 from datetime import datetime
 import os
@@ -9,6 +9,9 @@ import json
 import pymongo
 # import json_utils
 from bson.json_util import dumps
+
+conn = 'mongodb://localhost:27017'
+client = pymongo.MongoClient(conn)
 
 
 

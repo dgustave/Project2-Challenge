@@ -14,10 +14,8 @@ import json
 
 
 
-app = Flask(__name__)
 
-@app.route('/Stock_Select', methods=['POST']) 
-def Stock_Select(): 
+def Stock_Select(request): 
    if request.method == 'POST':
     stock = request.form.get('symb') 
     stockstdate = request.form.get('start')

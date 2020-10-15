@@ -877,7 +877,8 @@ def investopediaScrape():
     #195]:
 
 
-    sunburst_collection.replace_one({}, sun_dict, upsert= True)
+    sunburst_collection.update_one({}, {"$set": sun_dict}, upsert= True)
+
 
 
     #110]:

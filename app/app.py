@@ -27,7 +27,9 @@ import ETL
 @app.route('/Stock_Select', methods=['POST']) 
 def Stock_Select(): 
     ETL.Stock_Select()
-    return render_template('Stocksearch.html')   
+    return render_template('Stocksearch.html') 
+
+  
 
 
 if __name__ == "__main__":

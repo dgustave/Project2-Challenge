@@ -1,9 +1,14 @@
 # Import Dependencies 
-from flask import Flask, request, render_template, redirect
-from flask_assets import Environment, Bundle
+from flask import Flask, request, render_template, redirect,jsonify
+# from flask_assets import Environment, Bundle
 from flask_scss import Scss
 from datetime import datetime
 import os
+
+import json
+import pymongo
+# import json_utils
+from bson.json_util import dumps
 
 
 
@@ -34,6 +39,15 @@ def profile():
 @app.route('/Searched_Stock/')
 def Searched_Stock():
     return render_template('Stocksearch.html')
+
+@app.route("/sunburst_data.json")
+def access_sunburst_data():
+    db = client.investopedia
+    collection = db.sunburst    
+    sunburst_obj =[s for s in collection.find()]
+    response= dumps(sunburst_obj)
+    print(response)
+    return response
 
  
 if __name__ == "__main__":

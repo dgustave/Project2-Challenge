@@ -19,7 +19,14 @@ import ETL
 @app.route('/Stock_Select', methods=['POST']) 
 def Stock_Select(): 
     ETL.Stock_Select()
-    return render_template('Stocksearch.html') 
+    return render_template('Stocksearch.html')
+
+
+@app.route('/iframe', methods=['POST']) 
+def iframe():
+    urls = ['..\data\StockETL.csv']
+    iframe = (urls)
+    return render_template('Stocksearch.html', iframe=iframe) 
 
 @app.route('/profile/')
 def profile():

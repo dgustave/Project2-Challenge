@@ -6,7 +6,7 @@ var TFormat      = {"day":"%d %b '%y", "week":"%d %b '%y", "month":"%b '%y" };
 var genRaw, genData;                                                                       
     
 (function() {
-    d3.csv("../../data/processed/zm.csv", genType, function(data) {
+    d3.json("/NCR.json", genType, function(data) {
       genRaw         = data;
       mainjs();
     }); 

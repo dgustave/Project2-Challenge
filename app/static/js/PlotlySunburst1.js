@@ -30,36 +30,40 @@
   
 //     Plotly.newPlot('tester', data, layout)
 //   })
+d3.json("/tester.json").then(function(data){
+  console.log(data.response[0].ids)
+  var data = [{
+    type: "sunburst",
+    maxdepth: 2,
+    ids: data.response[0].ids,
+    labels: data.response[0].labels,
+    parents: data.response[0].parents,
+    textposition: 'inside',
+    insidetextorientation: 'radial',
+    opacity: .8,
+    "marker": {"line": {"width": 0.5,
 
-  Plotly.d3.json('http://127.0.0.1:5000/sunburst_data.json',function(s_data){
-    console.log(s_data[0])
+               "color" : "white"}},
+               
+  leaf: {opacity: 0.4},
+  leaves: {opacity: 0.4}
+  }]
+  console.log(data)
+  var layout = {margin: {l: 10, r: 0, b: 0, t:0},
+  paper_bgcolor: 'rgba(0,0,0,0)', 
+  sunburstcolorway:[
+    "#636EFA","#EF553B","#00CC96","#AB63FA","#19D3F3",
+    "#E763FA", "#FECB52","#FFA15A","#FF6692","#B6E880", "teal"
+  ]}
+
+  Plotly.newPlot('tester', data, layout);
+}).catch(function(error){console.log(error)});
+
+
+  // Plotly.d3.json('http://127.0.0.1:5000/').then(function(sun){
+  //   console.log(sun)
     //   function unpack(rows, key) {
     //   return rows.map(function(row) {return row[key]})
     // })
   
-  var data = [{
-        type: "sunburst",
-        maxdepth: 2,
-        ids: s_data[0].ids,
-        labels: s_data[0].labels,
-        parents: s_data[0].parents,
-        textposition: 'inside',
-        insidetextorientation: 'radial',
-        opacity: .8,
-        "marker": {"line": {"width": 0.5,
-
-                   "color" : "white"}},
-                   
-  leaf: {opacity: 0.4},
-  leaves: {opacity: 0.4}
-  }]
- console.log(data)
-  var layout = {margin: {l: 10, r: 0, b: 0, t:0},
-    paper_bgcolor: 'rgba(0,0,0,0)', 
-    sunburstcolorway:[
-      "#636EFA","#EF553B","#00CC96","#AB63FA","#19D3F3",
-      "#E763FA", "#FECB52","#FFA15A","#FF6692","#B6E880", "teal"
-    ]}
-
-  Plotly.newPlot('tester', data, layout)
-})
+  

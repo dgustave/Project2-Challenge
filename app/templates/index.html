@@ -29,8 +29,9 @@
   <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/latest/css/font-awesome.min.css">
   <!-- CSS Files -->
   <link href="../static/css/material-dashboard.css?v=2.1.0" rel="stylesheet" />
-   <script src="https://cdn.plot.ly/plotly-latest.min.js"></script>
-   <script src="https://d3js.org/d3.v4.min.js"></script>
+  <script src="https://d3js.org/d3.v6.min.js"></script>
+  <script src="https://cdn.plot.ly/plotly-latest.min.js"></script>
+   <!-- <script src="https://d3js.org/d3.v6.min.js"></script> -->
 </head>
 
 <body class="dark-edition">
@@ -169,7 +170,10 @@
               <div class="card card-chart">
                 <div class="card-header-icon card-header-success">
                   <!-- <div class="ct-chart" id="dailySalesChart"></div> -->
-                  <div  id="tester" ></div> <!-- style="width:400px;height:400px;" -->  
+                  <div  id="tester" ></div>
+                
+                  
+                  <!-- <p>{{response}}</p> style="width:400px;height:400px;"   -->
                 </div>
                 <div class="card-body">
                   <h4 class="card-title">S&P 500 Sectors</h4>
@@ -890,6 +894,7 @@
 
     });
   </script>
+  <!-- <script var sun= {{ sunburst.chart_data | safe}}></script> -->
   <script src= "../static/js/PlotlySunburst1.js"></script> 
 </body>
 

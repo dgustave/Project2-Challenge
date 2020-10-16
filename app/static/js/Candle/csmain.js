@@ -1,37 +1,26 @@
-// var parseDate    = d3.time.format("%Y-%m-%d").parse;
+var parseDate    = d3.time.format("%Y-%m-%d").parse;
 var TPeriod      = "3M";
 var TDays        = {"1M":21, "3M":63, "6M":126, "1Y":252, "2Y":504, "4Y":1008 };
 var TIntervals   = {"1M":"day", "3M":"day", "6M":"day", "1Y":"week", "2Y":"week", "4Y":"month" };
 var TFormat      = {"day":"%d %b '%y", "week":"%d %b '%y", "month":"%b '%y" };
-var genRaw, genData;  
-
-// Reference for index in json data:
-// [0] CLOSE
-// [1] HIGH
-// [2] LOW
-// [3] OPEN
-// [4] TIMESTAMP
-// [5] TURNOVER 
-// [6] VOLATILITY
-
-
-// genType, 
-// (function() { 
-//     d3.json("/NCR.json").then(function(data) {
-//         console.log()
-//       genRaw         = data;
-//       mainjs();
-//     }); 
-// }());
-(function() { 
-d3.json("/NCR.json", genType).then(function(data) {
-    console.log(data[0])
-    console.log(data[0].TIMESTAMP)
-
-    genRaw         = data;
-    mainjs();
-}).catch(function(error){console.log(error)})
+var genRaw, genData;                                                                       
+    
+(function() {
+    d3.csv("msft.csv", genType, function(data) {
+      genRaw         = data;
+      mainjs();
+    }); 
 }());
+
+// (function() { 
+//     d3.json("/NCR.json", genType, function(data) {
+//         console.log(data[0])
+//         console.log(data[0].TIMESTAMP)
+
+//         genRaw         = data;
+//         mainjs();
+//     })
+// }());
 
 function toSlice(data) { return data.slice(-TDays[TPeriod]); }
 
@@ -132,3 +121,4 @@ function displayGen(mark) {
     var header      = csheader();
     d3.select("#infobar").datum(genData.slice(mark)[0]).call(header);
 }
+console.log(genRaw) 

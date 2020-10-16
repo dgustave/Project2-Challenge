@@ -56,8 +56,9 @@ def NRC_Select():
     #         ts = int(j)
     #         dt.datetime.fromtimestamp(ts).strftime('%Y-%m-%d')
     #     # print(x.keys())
-        stock_data.append({'STOCK': [x['CLOSE'], x['HIGH'], x['LOW '], x['OPEN'],  timestamp , x['TURNOVER'], x['VOLATILITY']]})
-        # stock_data.append({'CLOSE': x['CLOSE'], 'HIGH': x['HIGH'], 'LOW': x['LOW '], 'OPEN': x['OPEN'], 'TIMESTAMP':  timestamp , 'TURNOVER': x['TURNOVER'], 'VOLATILITY': x['VOLATILITY']})
+        # stock_data.append({'STOCK': [x['CLOSE'], x['HIGH'], x['LOW '], x['OPEN'],  timestamp , x['TURNOVER'], x['VOLATILITY']]})
+        stock_data.append({'CLOSE': x['CLOSE'], 'HIGH': x['HIGH'], 'LOW': x['LOW '], 'OPEN': x['OPEN'], 'TIMESTAMP':  timestamp , 'TURNOVER': x['TURNOVER'], 'VOLATILITY': x['VOLATILITY']})
+    
     # # print(type(timestamp[0]))
     return dumps(stock_data)
 

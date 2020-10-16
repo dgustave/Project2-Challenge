@@ -20,16 +20,11 @@ client = pymongo.MongoClient(conn)
 # Create an instance of Flask app
 app = Flask(__name__)
 
-@app.route('/',methods=['GET','POST'])
+@app.route('/')
 def index():
-    db = client.investopedia
-    collection = db.sunburst
-    sunburst_obj = collection.find() 
-    response= dumps(sunburst_obj)
-    # print(response)
-    data = {'chart_data': response}
-    return render_template('index.html', sunburst=data)
-    # return render_template('index.html',response=response)
+   
+    return render_template('index.html')
+   
 
 import ETL
 @app.route('/Stock_Select', methods=['POST']) 
@@ -68,13 +63,8 @@ def tester():
         s['parents']=parents
         sunburst_obj.append(s)
     
-        
-
-    
-    # response= dumps(sunburst_obj)
 
     response = dumps({"response": sunburst_obj})
-    # print(response)
     return response
 
 

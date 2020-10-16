@@ -36,6 +36,10 @@ def Stock_Select():
 def profile():
     return render_template('profile.html')
 
+@app.route('/StockETL/')
+def StockETL():
+    return render_template('StockETL.html')
+
 @app.route('/Searched_Stock/')
 def Searched_Stock():
     return render_template('Stocksearch.html')

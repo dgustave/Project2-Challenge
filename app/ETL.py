@@ -46,7 +46,7 @@ def Stock_Select(request):
      yaxis_title=f"{stock}"
     )
 
-    fig.write_html("..\data\StockETL.html")
+    fig.write_html('templates/StockETL.html')
 
     data_df2.to_csv('../data/StockETL.csv', index = True)
    

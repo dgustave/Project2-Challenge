@@ -1,22 +1,13 @@
-
 <!DOCTYPE html>
 <html lang="en">
 
 <head>
-  <!-- include polyfills for custom event, Symbol and Custom Elements -->
-  <script src="..\static\js\d3.min.js"></script>
-  <script src="..\static\js\d3fc.min.js"></script>
-  <script src="..\static\js\babel.min.js"></script>
-
-  <link rel="stylesheet" type="text/css" href="..\static\css\style.css" />
-  <link rel='stylesheet' href='..\static\css\bootstrap.min.css'>
-
   <meta charset="utf-8" />
   <link rel="apple-touch-icon" sizes="76x76" href="../static/img/apple-icon.png">
   <link rel="icon" type="image/png" href="../static/img/favicon.png">
   <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1" />
   <title>
-    Material Dashboard Dark Edition 
+    Dashboard created by Novice Brokers
   </title>
   <meta content='width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0, shrink-to-fit=no' name='viewport' />
   <!--     Fonts and icons     -->
@@ -24,23 +15,28 @@
   <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/latest/css/font-awesome.min.css">
   <!-- CSS Files -->
   <link href="../static/css/material-dashboard.css?v=2.1.0" rel="stylesheet" />
-  <!-- CSS Just for demo purpose, don't include it in your project -->
-  <link href="../static/demo/demo.css" rel="stylesheet" />
- 
+   <script src="https://cdn.plot.ly/plotly-latest.min.js"></script>
 </head>
+
 <body class="dark-edition">
   <div class="wrapper ">
     <div class="sidebar" data-color="purple" data-background-color="black" data-image="../static/img/sidebar-2.jpg">
+      <!--
+        Tip 1: You can change the color of the sidebar using: data-color="purple | azure | green | orange | danger"
+
+        Tip 2: you can also add an image using data-image tag
+    -->
       <div class="logo"><a href="http://www.creative-tim.com" class="simple-text logo-normal">
-          Stock Lookup
+        Novice Brokers
         </a></div>
       <div class="sidebar-wrapper">
         <ul class="nav">
-          <li class="nav-item  ">
+          <li class="nav-item active  ">
             <a class="nav-link" href="/">
-              <i class="material-icons">home</i>
+              <i class="material-icons">dashboard</i>
               <p>Home</p>
             </a>
+          </li>
         </ul>
       </div>
     </div>
@@ -49,7 +45,8 @@
       <nav class="navbar navbar-expand-lg navbar-transparent navbar-absolute fixed-top " id="navigation-example">
         <div class="container-fluid">
           <div class="navbar-wrapper">
-            </div>
+            <a class="navbar-brand" href="javascript:void(0)">Dashboard</a>
+          </div>
           <button class="navbar-toggler" type="button" data-toggle="collapse" aria-controls="navigation-index" aria-expanded="false" aria-label="Toggle navigation" data-target="#navigation-example">
             <span class="sr-only">Toggle navigation</span>
             <span class="navbar-toggler-icon icon-bar"></span>
@@ -69,40 +66,123 @@
                   <div class="ripple-container"></div>
                 </form>
               </div>
-       <!-- Html viewer -->
-     <body class='container'>
-  <div class='jumbotron'>
-    <h1>Financial chart with D3 and d3fc</h3>
+            </form>
+            <ul class="navbar-nav">
+              <li class="nav-item">
+                <a class="nav-link" href="javascript:void(0)">
+                  <i class="material-icons">dashboard</i>
+                  <p class="d-lg-none d-md-block">
+                    Stats
+                  </p>
+                </a>
+              </li>
+                </a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" href="javascript:void(0)">
+                  <i class="material-icons">person</i>
+                  <p class="d-lg-none d-md-block">
+                    Account
+                  </p>
+                </a>
+              </li>
+            </ul>
+          </div>
+        </div>
+      </nav>
+      <!-- End Navbar -->
+      <div class="content">
+        <div class="container-fluid">
+          <iframe width = "1000" height = "1200" frameborder = "0" scrolling = "yes" src = "StockETL" ></iframe> 
+            <div class="row">
+              <div class="col-xl-6 col-lg-12">
+                <div class="card card-chart">
+                  <div class="card-header-icon card-header-success">
+                  <!-- <div class="ct-chart" id="dailySalesChart"></div> -->
+                  <div  id="Selectedstock" ></div> <!-- style="width:400px;height:400px;" -->
+                  </div>
+                </div>
+              </div>
+            <div>
+           </div>
+          </div>
+        </div>
       </div>
-
-  <div id="chart-element" style="height: 500px"></div>
-
-  <svg style="width: 0; height: 0">
-    <defs>
-      <linearGradient id="area-gradient" x1="0%" y1="0%" x2="0%" y2="100%">
-        <stop offset="0%" stop-opacity="0.3" stop-color="#fff" />
-        <stop offset="100%" stop-opacity="0" stop-color="#1a9af9" />
-      </linearGradient>
-    </defs>
-    <g id="active" transform="translate(-9.5-9.5)">
-        <circle cx="9.5" cy="9.5" r="9.5" fill="#fff"/>
-        <path d="M19 9.5c0 5.2-4.3 9.5-9.5 9.5S0 14.7 0 9.5 4.3 0 9.5 0 19 4.3 19 9.5zm-.9 0c0-.4-.3-.7-.7-.7H16c-.4 0-.7.3-.7.7 0 .4.3.7.7.7h1.4c.3 0 .7-.3.7-.7zm-2.5-5c.3-.3.3-.7 0-1-.3-.3-.7-.3-1 0l-1 1c-.3.3-.3.7 0 1 .3.3.7.3 1 0l1-1zm-1.8 5c0-2.4-1.9-4.3-4.3-4.3S5.2 7.1 5.2 9.5s1.9 4.3 4.3 4.3 4.3-1.9 4.3-4.3zm-3.6-6.4V1.7c0-.4-.3-.7-.7-.7-.4 0-.7.3-.7.7v1.4c0 .4.3.7.7.7.4 0 .7-.3.7-.7zM5.5 5.5c.3-.3.3-.7 0-1l-1-1c-.3-.3-.7-.3-1 0s-.3.7 0 1l1 1c.2.2.7.2 1 0zM3.1 8.8H1.6c-.4 0-.7.3-.7.7 0 .4.3.7.7.7H3c.4 0 .7-.3.7-.7.1-.4-.2-.7-.6-.7zm.3 5.7c-.3.3-.3.7 0 1 .3.3.7.3 1 0l1-1c.3-.3.3-.7 0-1-.3-.3-.7-.3-1 0l-1 1zm5.4 1.4v1.4c0 .4.3.7.7.7.4 0 .7-.3.7-.7v-1.4c0-.4-.3-.7-.7-.7-.4 0-.7.3-.7.7zm4.7-2.4c-.3.3-.3.7 0 1l1 1c.3.3.7.3 1 0 .3-.3.3-.7 0-1l-1-1c-.2-.2-.7-.2-1 0z"/>
-    </g>
-    <g id="post" transform="translate(-9.5-9.5)">
-        <circle cx="9.5" cy="9.5" r="9.5" fill="#fff"/>
-        <path d="M9.5 19c5.2 0 9.5-4.3 9.5-9.5S14.7 0 9.5 0 0 4.3 0 9.5 4.3 19 9.5 19zM7.9 1.7c.6-.2 1.3-.3 2-.3C14.4 1.4 18 5 18 9.5s-3.6 8.1-8.1 8.1c-.7 0-1.4-.1-2-.3 3.5-.9 6.1-4.1 6.1-7.8 0-3.8-2.6-6.9-6.1-7.8z" fill-rule="evenodd" clip-rule="evenodd"/>
-    </g>
-    <g id="pre" transform="translate(-9.5-9.5)">
-        <circle cx="9.5" cy="9.5" r="9.5" fill="#fff"/>
-        <path d="M19 9.5c0 5.2-4.3 9.5-9.5 9.5S0 14.7 0 9.5 4.3 0 9.5 0 19 4.3 19 9.5zM14.3 14.3l-3.1-3.7c.2-.3.4-.7.4-1.1 0-.9-.6-1.7-1.5-1.9V2.3c0-.3-.2-.5-.5-.5s-.6.3-.6.5v5.2c-.9.2-1.5 1-1.5 1.9 0 1.1.9 2 2 2 .3 0 .6-.1.9-.2l3.2 3.7c.1.1.2.2.4.2.1 0 .2 0 .3-.1.1-.2.2-.5 0-.7z"/>
-    </g>
-  </svg>
-
-  <script src="..\static\js\legend.js" type='text/babel'></script>
-  <script src="..\static\js\util.js" type='text/babel'></script>
-  <script src="..\static\js\chart.js" type='text/babel'></script>
-          </body>
+      <script>
+        const x = new Date().getFullYear();
+        let date = document.getElementById('date');
+        date.innerHTML = '&copy; ' + x + date.innerHTML;
+      </script>
+    </div>
+  </div>
+     <div class="dropdown show-dropdown">
+      <a href="#" data-toggle="dropdown">
+        <i class="fa fa-cog fa-2x"> </i>
+      </a>
+      <ul class="dropdown-menu">
+        <li class="header-title"> Sidebar Filters</li>
+        <li class="adjustments-line">
+          <a href="javascript:void(0)" class="switch-trigger active-color">
+            <div class="badge-colors ml-auto mr-auto">
+              <span class="badge filter badge-purple active" data-color="purple"></span>
+              <span class="badge filter badge-azure" data-color="azure"></span>
+              <span class="badge filter badge-green" data-color="green"></span>
+              <span class="badge filter badge-warning" data-color="orange"></span>
+              <span class="badge filter badge-danger" data-color="danger"></span>
+            </div>
+            <div class="clearfix"></div>
+          </a>
+        </li>
+        <li class="header-title">Images</li>
+        <li>
+          <a class="img-holder switch-trigger" href="javascript:void(0)">
+            <img src="../static/img/sidebar-1.jpg" alt="">
+          </a>
+        </li>
+        <li class="active">
+          <a class="img-holder switch-trigger" href="javascript:void(0)">
+            <img src="../static/img/sidebar-2.jpg" alt="">
+          </a>
+        </li>
+        <li>
+          <a class="img-holder switch-trigger" href="javascript:void(0)">
+            <img src="../static/img/sidebar-3.jpg" alt="">
+          </a>
+        </li>
+        <li>
+          <a class="img-holder switch-trigger" href="javascript:void(0)">
+            <img src="../static/img/sidebar-4.jpg" alt="">
+          </a>
+        </li>
+        <li class="button-container">
+          <a href="https://www.creative-tim.com/product/material-dashboard-dark" target="_blank" class="btn btn-primary btn-block">Free Download</a>
+        </li>
+        <!-- <li class="header-title">Want more components?</li>
+            <li class="button-container">
+                <a href="https://www.creative-tim.com/product/material-dashboard-pro" target="_blank" class="btn btn-warning btn-block">
+                  Get the pro version
+                </a>
+            </li> -->
+        <li class="button-container">
+          <a href="https://demos.creative-tim.com/material-dashboard-dark/docs/2.0/getting-started/introduction.html" target="_blank" class="btn btn-default btn-block">
+            View Documentation
+          </a>
+        </li>
+        <li class="button-container github-star">
+          <a class="github-button" href="https://github.com/creativetimofficial/material-dashboard/tree/dark-edition" data-icon="octicon-star" data-size="large" data-show-count="true" aria-label="Star ntkme/github-buttons on GitHub">Star</a>
+        </li>
+        <li class="header-title">Thank you for 95 shares!</li>
+        <li class="button-container text-center">
+          <button id="twitter" class="btn btn-round btn-twitter"><i class="fa fa-twitter"></i> &middot; 45</button>
+          <button id="facebook" class="btn btn-round btn-facebook"><i class="fa fa-facebook-f"></i> &middot; 50</button>
+          <br>
+          <br>
+        </li>
+      </ul>
+    </div>
+  </div>
   <!--   Core JS Files   -->
+  <script src= "../static/js/chart.js"></script> 
   <script src="../static/js/core/jquery.min.js"></script>
   <script src="../static/js/core/popper.min.js"></script>
   <script src="../static/js/core/bootstrap-material-design.min.js"></script>
@@ -118,9 +198,7 @@
   <script src="../static/js/plugins/bootstrap-notify.js"></script>
   <!-- Control Center for Material Dashboard: parallax effects, scripts for the example pages etc -->
   <script src="../static/js/material-dashboard.js?v=2.1.0"></script>
-  <!-- Material Dashboard DEMO methods, don't include it in your project! -->
-  <script src="../static/demo/demo.js"></script>
-  <script>
+   <script>
     $(document).ready(function() {
       $().ready(function() {
         $sidebar = $('.sidebar');
@@ -285,9 +363,11 @@
   <script>
     $(document).ready(function() {
       // Javascript method's body can be found in assets/js/demos.js
-      demo.initGoogleMaps();
+      md.initDashboardPageCharts();
+
     });
   </script>
+  
 </body>
 
 </html>

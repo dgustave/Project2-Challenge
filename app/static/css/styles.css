@@ -1,0 +1,108 @@
+body {
+  /* https://stackoverflow.com/a/12070436/249933 */
+  font-family: "HelveticaNeue-Light", "Helvetica Neue Light", "Helvetica Neue",
+    Helvetica, Arial, "Lucida Grande", sans-serif;
+  font-weight: 300;
+}
+
+path.area {
+  fill: url(#area-gradient);
+  fill-opacity: 1;
+}
+
+path.line {
+  stroke: rgb(26, 154, 249);
+}
+
+path.ema {
+  stroke: #c00;
+  fill: none;
+}
+
+.bottom-axis {
+  height: 20px !important;
+}
+
+.y-axis .tick path,
+.x-axis .tick path {
+  stroke: #bbb;
+}
+
+.y-axis .domain,
+.x-axis .domain {
+  display: none;
+}
+
+.x-axis text {
+  font-weight: bold;
+  font-size: 12px;
+}
+
+.annotation-line.vertical text {
+  display: none;
+}
+
+.annotation-line.vertical {
+  stroke: #888 !important;
+  stroke-width: 2px;
+  stroke-dasharray: 3, 3;
+}
+
+.annotation-band.vertical {
+  opacity: 0.3;
+  fill: white;
+}
+
+.annotation-crosshair .annotation-line.horizontal,
+.annotation-crosshair .annotation-line.vertical {
+  display: none;
+}
+
+.volume {
+  opacity: 0.2;
+}
+
+path.line {
+  stroke-width: 1.5px;
+}
+
+.callout:nth-child(2) path {
+  fill: #c00;
+}
+
+.callout:nth-child(1) path {
+  fill: rgb(26, 154, 249);
+}
+
+.callout text {
+  font-size: 10px;
+  fill: white;
+  text-anchor: end;
+  dominant-baseline: central;
+}
+
+.legend-value {
+  font-size: 12px;
+  fill: #444;
+}
+
+.legend-label {
+  text-anchor: end;
+  font-size: 12px;
+  fill: #bbb;
+}
+
+d3fc-canvas {
+  pointer-events: none;
+}
+
+.y-axis {
+  width: 50px;
+  border-left: 1px solid #bbb;
+}
+
+.border {
+  border: 1px solid #bbb;
+  grid-column: 3 / 5;
+  grid-row: 3;
+}

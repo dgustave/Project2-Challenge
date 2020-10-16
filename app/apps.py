@@ -3,13 +3,13 @@ from flask import Flask, request, render_template, redirect
 from flask_pymongo import PyMongo
 from flask_assets import Environment, Bundle
 from flask_scss import Scss
-from datetime import datetime
 import pymongo
 from pymongo import MongoClient
 from flask import jsonify, json, request
 from bson.json_util import dumps
 from bson.objectid import ObjectId
-import datetime
+import datetime as dt
+from dateutil.parser import parse
 import os
 
 client =  MongoClient("mongodb://localhost:27017")
@@ -42,15 +42,25 @@ def NRC_Select():
     # d = datetime.datetime.strptime(x['TIMESTAMP'],'%Y-%m-%d')
     # stock_data = [x for x in  yf_collection.find()]
     stock_data = []
-    time = [] 
+    # newtime = [] 
+    # .strftime('%Y-%m-%d')
     for x in yf_collection.find():
-        for j in x["TIMESTAMP"]:
-            time = datetime.strptime(j["TIMESTAMP"], "%Y-%m-%d")
-        # print(x.keys())
-        stock_data.append({'CLOSE': x['CLOSE'], 'HIGH': x['HIGH'], 'LOW': x['LOW '], 'OPEN': x['OPEN'], 'TIMESTAMP': x['TIMESTAMP'], 'TURNOVER': x['TURNOVER'], 'VOLATILITY': x['VOLATILITY']})
-    response = dumps(stock_data)
-   
-    return jsonify({'NCR': response}) 
+        timestamp = [d.strftime('%Y-%m-%d')for d in x['TIMESTAMP']]
+        # listToStr = map(str, timestamp)
+        # time=[i for i in listToStr if not i in ["/"]]
+        # # dates = time.split()
+
+        # print(x['TIMESTAMP'])
+        # unixtime = x['TIMESTAMP'][:-3]
+    #     for j in unixtime:
+    #         ts = int(j)
+    #         dt.datetime.fromtimestamp(ts).strftime('%Y-%m-%d')
+    #     # print(x.keys())
+        # stock_data.append({'STOCK': [x['CLOSE'], x['HIGH'], x['LOW '], x['OPEN'],  timestamp , x['TURNOVER'], x['VOLATILITY']]})
+        stock_data.append({'CLOSE': x['CLOSE'], 'HIGH': x['HIGH'], 'LOW': x['LOW '], 'OPEN': x['OPEN'], 'TIMESTAMP':  timestamp , 'TURNOVER': x['TURNOVER'], 'VOLATILITY': x['VOLATILITY']})
+    
+    # # print(type(timestamp[0]))
+    return dumps(stock_data)
 
 # @app.route('/BIO.json', methods=['POST']) 
 # def Stock_Select(): 

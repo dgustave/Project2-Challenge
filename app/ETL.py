@@ -8,12 +8,14 @@ from flask import request
 import datetime
 from pymongo import MongoClient
 import numpy as np
+import json
 
 
-app = Flask(__name__)
 
-@app.route('/Stock_Select', methods=['POST']) 
-def Stock_Select(): 
+
+
+
+def Stock_Select(request): 
    if request.method == 'POST':
     stock = request.form.get('symb') 
     stockstdate = request.form.get('start')
@@ -28,13 +30,17 @@ def Stock_Select():
     #data_df.index = [x for x in range(1, len(data_df.values)+1)]
     #data_df.index.name = 'id'
     #data_df.index = data_df.index.map(str)
-    data_df.columns = ["OPEN", "HIGH", "LOW", "CLOSE", "Adj Close", "Volume"]
+    data_df=data_df.reset_index()
+
+    data_df.columns = ["Date", "OPEN", "HIGH", "LOW", "CLOSE", "ADJ Close", "Volume"]
     data_df = data_df.round({"OPEN": 2, "HIGH": 2, "LOW": 2, "CLOSE": 2})
 
-	#client =  MongoClient("mongodb://localhost:27017")
-	#db = client['yfinance"]
-	#yfinance_collection = db['yfinanex']
-	#yfinance_collection.update_many({},{"$set": {"Historical data": nameofdf}})
-    data_df.to_csv('../data/external/StockETL.csv', index = True)
-if __name__ == "__main__":
-    main()
+    data_df.to_csv('../data/StockETL.csv', index = True)
+   
+
+    stock_json = data_df.to_json(orient="records", date_format='iso')
+    final_json = json.loads(stock_json)
+   json.dumps(stock_json, indent=0) 
+   with open('../data/Searchedstock.json', 'w') as json_file:
+    json.dump(final_json, json_file)
+

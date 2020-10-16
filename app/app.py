@@ -32,13 +32,6 @@ def Stock_Select():
     ETL.Stock_Select(request)
     return render_template('Stocksearch.html')
 
-
-@app.route('/iframe', methods=['POST']) 
-def iframe():
-    urls = ['..Project2-Challenge\data\StockETL.csv']
-    iframe = (urls)
-    return render_template('Stocksearch.html', iframe=iframe) 
-
 @app.route('/profile/')
 def profile():
     return render_template('profile.html')

@@ -43,46 +43,46 @@
         Tip 2: you can also add an image using data-image tag
     -->
       <div class="logo"><a href="http://www.creative-tim.com" class="simple-text logo-normal">
-          Creative Tim
+         Novice Broker
         </a></div>
       <div class="sidebar-wrapper">
         <ul class="nav">
           <li class="nav-item  ">
-            <a class="nav-link" href="./dashboard.html">
+            <a class="nav-link" href="./index.html">
               <i class="material-icons">dashboard</i>
               <p>Dashboard</p>
             </a>
           </li>
           <li class="nav-item ">
-            <a class="nav-link" href="./user.html">
+            <a class="nav-link" href="./profile.html">
               <i class="material-icons">person</i>
-              <p>User Profile</p>
+              <p>Profiling Report</p>
             </a>
           </li>
           <li class="nav-item ">
             <a class="nav-link" href="./tables.html">
               <i class="material-icons">content_paste</i>
-              <p>Table List</p>
+              <p>S&P 500 Historical Data</p>
             </a>
           </li>
-          <li class="nav-item ">
+          <!-- <li class="nav-item ">
             <a class="nav-link" href="./typography.html">
               <i class="material-icons">library_books</i>
               <p>Typography</p>
             </a>
-          </li>
+          </li> -->
           <li class="nav-item active ">
             <a class="nav-link" href="./icons.html">
-              <i class="material-icons">bubble_chart</i>
-              <p>Icons</p>
+              <i class="material-icons">candle_chart</i>
+              <p>Candle Stick Visual</p>
             </a>
           </li>
-          <li class="nav-item ">
+          <!-- <li class="nav-item ">
             <a class="nav-link" href="./map.html">
               <i class="material-icons">location_ons</i>
               <p>Maps</p>
             </a>
-          </li>
+          </li> -->
           <li class="nav-item ">
             <a class="nav-link" href="./notifications.html">
               <i class="material-icons">notifications</i>
@@ -103,7 +103,15 @@
       <nav class="navbar navbar-expand-lg navbar-transparent navbar-absolute fixed-top " id="navigation-example">
         <div class="container-fluid">
           <div class="navbar-wrapper">
-            <a class="navbar-brand" href="javascript:void(0)">Stocks</a>
+            <!-- <a class="navbar-brand" href="javascript:void(0)">Stocks</a> -->
+            <div class="dropdown" >
+              <button onclick="myFunction()" class="dropbtn">TSLA</button>
+              <div id="myDropdown" class="dropdown-content">
+                <!-- <a href="/data/processed/TSLA.csv">TSLA</a>
+                <a href="/data/processed/NCR.csv">NCR</a>
+                <a href="/data/processed/CVS.csv">CSV</a>
+                <a href="/data/processed/BIIB.csv">BIIB</a> -->
+              </div>
           </div>
           <button class="navbar-toggler" type="button" data-toggle="collapse" aria-controls="navigation-index" aria-expanded="false" aria-label="Toggle navigation" data-target="#navigation-example">
             <span class="sr-only">Toggle navigation</span>
@@ -111,14 +119,22 @@
             <span class="navbar-toggler-icon icon-bar"></span>
             <span class="navbar-toggler-icon icon-bar"></span>
           </button>
+          <!-- <div class="dropdown" >
+            <button onclick="myFunction()" class="dropbtn">Stocks</button>
+            <div id="myDropdown" class="dropdown-content">
+              <a href="#">Link 1</a>
+              <a href="#">Link 2</a>
+              <a href="#">Link 3</a>
+            </div>
+          </div> -->
           <div class="collapse navbar-collapse justify-content-end">
             <form class="navbar-form">
               <div class="input-group no-border">
-                <input type="text" value="" class="form-control" placeholder="Search...">
+                <!-- <input type="text" value="" class="form-control" placeholder="Search...">
                 <button type="submit" class="btn btn-default btn-round btn-just-icon">
                   <i class="material-icons">search</i>
                   <div class="ripple-container"></div>
-                </button>
+                </button> -->
               </div>
             </form>
             <ul class="navbar-nav">
@@ -180,10 +196,12 @@
                         <div id="infolow" class="infobox"></div>
                         <div id="infoclose" class="infobox"></div>
                     </div>
+                    <!-- <iframe width = "1000" height = "1200" frameborder = "0" scrolling = "yes" src = "chart1" ></iframe> -->
+
+
                     <div id="chart1"></div>
                 </div> <!-- csbox -->
-            </div> <!-- demobox -->
-                   
+            </div> 
         </div>   
         </div>     
     </div>
@@ -199,8 +217,8 @@
   <!-- Place this tag in your head or just before your close body tag. -->
   <script async defer src="https://buttons.github.io/buttons.js"></script>
   <!--  Google Maps Plugin    -->
-  <script src="https://maps.googleapis.com/maps/api/js?key=YOUR_KEY_HERE"></script>
-  Chartist JS
+  <!-- <script src="https://maps.googleapis.com/maps/api/js?key=YOUR_KEY_HERE"></script> -->
+  <!-- Chartist JS -->
   <script src="../static/js/plugins/chartist.min.js"></script>
   <!--  Notifications Plugin    -->
   <script src="../static/js/plugins/bootstrap-notify.js"></script>
@@ -208,14 +226,16 @@
   <script src="../static/js/material-dashboard.js?v=2.1.0"></script>
   <!-- <script src="../static/demo/demo.js"></script> -->
   <!-- <script src="https://cdn.jsdelivr.net/npm/json2csv"></script> -->
-  <script src="https://d3js.org/d3.v6.min.js"></script>
+  <!-- <script src="https://d3js.org/d3.v6.js"></script> -->
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/2.5.0/Chart.min.js"></script>
+  <script src="//d3js.org/d3.v3.min.js" charset="utf-8"></script>
   <script src="//d3js.org/d3-queue.v3.min.js"></script>
   <script src="//d3js.org/topojson.v1.min.js"></script>
-  <script src="../static/js/Candle/cschart.js"></script>
-  <script src="../static/js/Candle/csbars.js"></script>
-  <script src="../static/js/Candle/csheader.js"></script>
-  <script src="../static/js/Candle/csdataprep.js"></script>
-  <script src="../static/js/Candle/csmain.js"></script>
+  <script src="../static/js/candle/cschart.js"></script>
+  <script src="../static/js/candle/csbars.js"></script>
+  <script src="../static/js/candle/csheader.js"></script>
+  <script src="../static/js/candle/csdataprep.js"></script>
+  <script src="../static/js/candle/csmain.js"></script>
   <script>
     $(document).ready(function() {
       $().ready(function() {

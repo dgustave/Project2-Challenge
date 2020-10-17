@@ -3,24 +3,33 @@ var TPeriod      = "3M";
 var TDays        = {"1M":21, "3M":63, "6M":126, "1Y":252, "2Y":504, "4Y":1008 };
 var TIntervals   = {"1M":"day", "3M":"day", "6M":"day", "1Y":"week", "2Y":"week", "4Y":"month" };
 var TFormat      = {"day":"%d %b '%y", "week":"%d %b '%y", "month":"%b '%y" };
-var genRaw, genData;                                                                       
-    
+var genRaw, genData;      
+
+function myFunction() {
+    document.getElementById("myDropdown").classList.toggle("show");
+  }
+  
+  // Close the dropdown menu if the user clicks outside of it
+  window.onclick = function(event) {
+    if (!event.target.matches('.dropbtn')) {
+      var dropdowns = document.getElementsByClassName("dropdown-content");
+      var i;
+      for (i = 0; i < dropdowns.length; i++) {
+        var openDropdown = dropdowns[i];
+        if (openDropdown.classList.contains('show')) {
+          openDropdown.classList.remove('show');
+        }
+      }
+    }
+  }
+
 (function() {
-    d3.csv("msft.csv", genType, function(data) {
+    d3.csv("TSLA.csv", genType, function(data) {
       genRaw         = data;
       mainjs();
     }); 
 }());
 
-// (function() { 
-//     d3.json("/NCR.json", genType, function(data) {
-//         console.log(data[0])
-//         console.log(data[0].TIMESTAMP)
-
-//         genRaw         = data;
-//         mainjs();
-//     })
-// }());
 
 function toSlice(data) { return data.slice(-TDays[TPeriod]); }
 
@@ -121,4 +130,3 @@ function displayGen(mark) {
     var header      = csheader();
     d3.select("#infobar").datum(genData.slice(mark)[0]).call(header);
 }
-console.log(genRaw) 

@@ -14,7 +14,6 @@ function cschart() {
         var extRight = width + margin.right
         var x = d3.scale.ordinal()
             .rangeBands([0, width]);
-            
         
         var y = d3.scale.linear()
             .rangeRound([height, 0]);

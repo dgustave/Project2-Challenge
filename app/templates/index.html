@@ -48,7 +48,7 @@
       <div class="sidebar-wrapper">
         <ul class="nav">
           <li class="nav-item active  ">
-            <a class="nav-link" href="./dashboard.html">
+            <a class="nav-link" href="/">
               <i class="material-icons">dashboard</i>
               <p>Dashboard</p>
             </a>
@@ -56,25 +56,25 @@
           <li class="nav-item ">
             <a class="nav-link" href="profile">
               <i class="material-icons">person</i>
-              <p>PANDAs Profiling Report</p>
+              <p>Profiling Report</p>
             </a>
           </li>
           <li class="nav-item ">
-            <a class="nav-link" href="./tables.html">
+            <a class="nav-link" href="/tables">
               <i class="material-icons">content_paste</i>
-              <p>Table List</p>
+              <p>S&P 500 Historical Data</p>
             </a>
           </li>
-          <li class="nav-item ">
+          <!-- <li class="nav-item ">
             <a class="nav-link" href="./typography.html">
               <i class="material-icons">library_books</i>
               <p>Typography</p>
             </a>
-          </li>
+          </li> -->
           <li class="nav-item ">
-            <a class="nav-link" href="./icons.html">
-              <i class="material-icons">bubble_chart</i>
-              <p>Candle Graph</p>
+            <a class="nav-link" href="./candle">
+              <i class="material-icons">candle_chart</i>
+              <p>Candle Stick Visual</p>
             </a>
           </li>
           <li class="nav-item ">
@@ -87,6 +87,12 @@
             <a class="nav-link" href="./notifications.html">
               <i class="material-icons">notifications</i>
               <p>Notifications</p>
+            </a>
+          </li>
+          <li class="nav-item ">
+            <a class="nav-link" href="./user.html">
+              <i class="material-icons">person</i>
+              <p>User Profile</p>
             </a>
           </li>
           <!-- <li class="nav-item active-pro ">
@@ -187,23 +193,25 @@
                 </div>
               </div>
             </div>
-          </div>
-            <!-- <div class="col-xl-4 col-lg-12">
+            <div class="col-xl-4 col-lg-12">
               <div class="card card-chart">
-                <div class="card-header card-header-warning">
-                  <div class="ct-chart" id="websiteViewsChart"></div>
+                <div class="card-header card-header-success">
+                  <!-- <div class="ct-chart" id="websiteViewsChart"></div> -->
                 </div>
                 <div class="card-body">
-                  <h4 class="card-title">Email Subscriptions</h4>
-                  <p class="card-category">Last Campaign Performance</p>
+                  <h4 class="card-title">SP</h4>
+                  {{table["S&P 500"] | safe}}
+                  <p class="card-category">S&P 500 Performance</p>
                 </div>
                 <div class="card-footer">
                   <div class="stats">
-                    <i class="material-icons">access_time</i> campaign sent 2 days ago
+                    <!-- <i class="material-icons">access_time</i> campaign sent 2 days ago -->
                   </div>
                 </div>
               </div>
-            </div> -->
+            </div>
+          </div>
+
             <!-- <div class="col-xl-4 col-lg-12">
               <div class="card card-chart">
                 <div class="card-header card-header-danger">
@@ -222,14 +230,14 @@
             </div>
           </div> -->
           <div class="row">
-            <div class="col-xl-3 col-lg-6 col-md-6 col-sm-6">
+            <!-- <div class="col-xl-3 col-lg-6 col-md-6 col-sm-6">
               <div class="card card-stats">
                 <div class="card-header card-header-success card-header-icon">
                   <div class="card-icon">
-                    <i class="material-icons">store</i>
+                    <i class="material-icons">Store</i>
                   </div>
-                  <p class="card-category">Outstanding Shares Sold</p>
-                  <h3 class="card-title">$34,245</h3>
+                  <p class="card-category">S & P 500</p>
+                  <h3 class="card-title"></h3>
                 </div>
                 <div class="card-footer">
                   <div class="stats">
@@ -237,8 +245,8 @@
                   </div>
                 </div>
               </div>
-            </div>
-            <div class="col-xl-4 col-lg-4 col-md-4 col-sm-4">
+            </div> -->
+            <div class="col-xl-6 col-lg-4 col-md-4 col-sm-4">
               <div class="card card-stats">
                 <div class="card-header card-header-warning card-header-icon">
                   <div class="card-icon">
@@ -299,7 +307,7 @@
                   <p>Join the Community</p>
                   </div>
               
-                  <div class="stats">
+                  <!-- <div class="stats">
                     <i class="material-icons">update</i> Just Updated 
 
                   </div>
@@ -598,7 +606,7 @@
                   </div>
                 </div>
               </div>
-            </div>
+            </div> -->
           </div>
         </div>
       </div>

@@ -3,9 +3,6 @@
 
 # # Step 1: Install Python packages
 
-# In[48]:
-
-
 import os
 import html5lib
 import pandas as pd
@@ -38,7 +35,7 @@ class RemoteDriverStartService():
     options.add_experimental_option("excludeSwitches", ["ignore-certificate-errors"])
     # Create a download path for external data sources as default: 
     options.add_experimental_option("prefs", {
-      "download.default_directory": r"C:\Users\Donley\Documents\GA_TECH\SUBMISSIONS\PROJECT2-CHALLENGE\data\external",
+      "download.default_directory": r"C:\Users\Donley\Documents\GA_TECH\SUBMISSIONS\PROJECT2-CHALLENGE\data\processed",
       "download.prompt_for_download": False,
       "download.directory_upgrade": True,
       "safebrowsing.enabled": True
@@ -252,36 +249,8 @@ def wsjScrape():
     text_area2.send_keys(Keys.CONTROL, "a")  # or Keys.COMMAND on Mac
     text_area2.send_keys(today)
 
-
-    # In[34]:
-
-
-    # Generate the data
-    generate_data = driver.find_element(By.ID, "datPickerButton")
-    try:
-        WebDriverWait(driver, timeout).until(EC.visibility_of_element_located((By.ID, "datPickerButton")))
-    except TimeoutException:
-        driver.quit()
-
-
-    generate_data.click()
-
-
-
-    # Download as csv  
-    download_sheet = driver.find_element(By.ID, "dl_spreadsheet")
-    try:
-        WebDriverWait(driver, timeout).until(EC.visibility_of_element_located((By.ID, "dl_spreadsheet")))
-    except TimeoutException:
-        driver.quit()
-
-
-
-    download_sheet.click()
-
-
-
-    sp_df = pd.read_csv('../data/external/HistoricalPrices.csv')
+    
+    sp_df = pd.read_csv('../data/processed/HistoricalPrices.csv')
 
 
 
@@ -301,6 +270,33 @@ def wsjScrape():
 
 
     prof.to_file(output_file='../app/templates/profile.html')
+
+
+
+
+    # Generate the data
+    generate_data = driver.find_element(By.ID, "datPickerButton")
+    # try:
+    #     WebDriverWait(driver, timeout).until(EC.visibility_of_element_located((By.ID, "datPickerButton")))
+    # except TimeoutException:
+    #     driver.quit()
+
+
+    generate_data.click()
+
+
+
+    # Download as csv  
+    download_sheet = driver.find_element(By.ID, "dl_spreadsheet")
+    # try:
+    #     WebDriverWait(driver, timeout).until(EC.visibility_of_element_located((By.ID, "dl_spreadsheet")))
+    # except TimeoutException:
+    #     driver.quit()
+
+
+
+    download_sheet.click()
+
 
 
 

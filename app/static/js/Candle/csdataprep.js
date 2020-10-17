@@ -1,5 +1,5 @@
 function genType(d) {
-  d.TIMESTAMP  = parseDate(d.TIMESTAMP);
+  d.TIMESTAMP  = parseDate(d.TIMESTAMP); //parseDate(d[0].TIMESTAMP)
   d.LOW        = +d.LOW;
   d.HIGH       = +d.HIGH; 
   d.OPEN       = +d.OPEN;

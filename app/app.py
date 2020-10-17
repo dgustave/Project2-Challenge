@@ -76,6 +76,12 @@ def tester():
 
     response = dumps({"response": sunburst_obj})
     return response
+
+@app.route('/User-Profile/')
+def user():
+
+    return render_template('user.html')
+
 @app.route('/candle') 
 def candle():
     with open('../data/processed/NCR.csv') as csv_file:

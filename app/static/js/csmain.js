@@ -10,7 +10,7 @@ var genRaw, genData;
     
 
 (function() {
-    d3.csv("https://raw.githubusercontent.com/dgustave/Project2-Challenge/master/data/processed/TSLA.csv", genType, function(data) {
+    d3.csv("https://raw.githubusercontent.com/dgustave/Project2-Challenge/main/data/processed/TSLA.csv", genType, function(data) {
       genRaw         = data;
     //   console.log(data)
       console.log(data.slice((-TDays[TPeriod])))

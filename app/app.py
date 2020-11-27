@@ -1,12 +1,11 @@
 # Import Dependencies 
 from flask import Flask, request, render_template, redirect, jsonify, url_for 
 from flask_pymongo import PyMongo
-from flask_assets import Environment, Bundle
-from flask_scss import Scss
+# from flask_assets import Environment, Bundle
+# from flask_scss import Scss
 import pymongo
 from datetime import datetime
 from pymongo import MongoClient
-from flask import jsonify, json, request
 from bson.json_util import dumps
 from bson.objectid import ObjectId
 # import datetime as dt

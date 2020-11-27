@@ -1,22 +1,18 @@
 # Import Dependencies 
-from flask import Flask, request, render_template, redirect, jsonify, url_for 
+from flask import Flask, request, render_template, redirect
 from flask_pymongo import PyMongo
-# from flask_assets import Environment, Bundle
-# from flask_scss import Scss
+from flask_assets import Environment, Bundle
+from flask_scss import Scss
 import pymongo
-from datetime import datetime
 from pymongo import MongoClient
+from flask import jsonify, json, request
 from bson.json_util import dumps
 from bson.objectid import ObjectId
-# import datetime as dt
+import datetime as dt
 from dateutil.parser import parse
-import sys
-import numpy as np
 import os
-import csv
 
-conn = 'mongodb://localhost:27017'
-client = pymongo.MongoClient(conn)
+client =  MongoClient("mongodb://localhost:27017")
 
 
 
@@ -25,75 +21,19 @@ app = Flask(__name__)
 
 @app.route('/')
 def index():
-    db = client['WallStreet']
-    sp_collection = db["SP500_Change"]
-    table = sp_collection.find_one()
-    print(table)
-    return render_template('index.html', table=table)
-@app.route('/tables') 
-def stable():
-    db = client['WallStreet']
-    hp_collection = db["HP"]
-    hdata = hp_collection.find_one()
-    print(hdata)
-    return render_template("tables.html", hdata=hdata)
-
-import ETL
-@app.route('/Stock_Select', methods=['POST']) 
-def Stock_Select(): 
-    ETL.Stock_Select(request)
-    return render_template('Stocksearch.html')
+    return render_template('index.html')
 
 @app.route('/profile/')
 def profile():
     return render_template('profile.html')
 
-@app.route('/StockETL/')
-def StockETL():
-    return render_template('StockETL.html')
-
 @app.route('/Searched_Stock/')
 def Searched_Stock():
     return render_template('Stocksearch.html')
 
-@app.route("/tester.json")
-def tester():
-    db = client.investopedia
-    collection = db.sunburst 
-    sunburst_obj =[] 
-    for s in collection.find():
-        parents=[]
-        for x in s['parents']:
-            if isinstance(x,float):
-                a=""
-            else:
-                a=x
-            parents.append(a)
-        s['parents']=parents
-        sunburst_obj.append(s)
-    
-
-    response = dumps({"response": sunburst_obj})
-    return response
-
-@app.route('/User-Profile/')
-def user():
-
-    return render_template('user.html')
-
-@app.route('/candle') 
+@app.route('/icons.html') 
 def candle():
-    with open('../data/processed/NCR.csv') as csv_file:
-            
-        data = csv.reader(csv_file, delimiter=',')
-        first_line = True
-        sdata = []
-        for row in data:
-            if not first_line:
-                sdata.append({"TIMESTAMP": row[0], "OPEN": row[1], "HIGH": row[2], "LOW ": row[3], "CLOSE": row[4], "TURNOVER": row[5], "VOLATILITY": row[6]})
-            else:
-                first_line = False
-        return render_template("icons.html", sdata=sdata)
+    return render_template('icons.html')
 
 @app.route('/NCR.json') 
 def NRC_Select(): 
@@ -128,8 +68,29 @@ def NRC_Select():
     # # print(type(timestamp[0]))
     return dumps({"NCR": stock_data})
 
+# @app.route('/BIO.json', methods=['POST']) 
+# def Stock_Select(): 
+#     ETL.Stock_Select()
+#     return render_template('Stocksearch.html')   
 
- 
+# @app.route('/CVS.json', methods=['POST']) 
+# def Stock_Select(): 
+#     ETL.Stock_Select()
+#     return render_template('Stocksearch.html')   
+
+# ENR 
+# LVGO 
+# NCR 
+# NEM 
+# PODD 
+# PWR 
+# SMG 
+# VRT 
+# XRX 
+
+
+
+
 if __name__ == "__main__":
     app.config['TEMPLATES_AUTO_RELOAD'] = True
     app.run(debug = True)

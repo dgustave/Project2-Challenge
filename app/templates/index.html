@@ -122,7 +122,7 @@
           </button>
           <div class="form">
               <form action="/Stock_Select" method="post">
-                <div class="input-group no-border">
+                <div class="input-group nav-item active">
                 <label for="symb">Stock Symbol</label><br>
                   <input type="text" name="symb">
                   <label for="start">Start Date</label><br>
@@ -203,8 +203,10 @@
                 </div>
                 <div class="card-body">
                   <h4 class="card-title">SP</h4>
-                  {{table["S&P 500"] | safe}}
+                  <!-- {{table["S&P 500"] | safe}} -->
+                  <div id="example-table-theme"></div>
                   <p class="card-category">S&P 500 Performance</p>
+
                 </div>
                 <div class="card-footer">
                   <div class="stats">
@@ -623,7 +625,7 @@
               </li>
             </ul>
           </nav>
-          <div class="copyright float-right" id="date">
+          <div class="copyright float-right" id="date"> 
             , made with <i class="material-icons">favorite</i> by
             <a href="" target="_blank">Novie Brokers</a>
           </div>
@@ -889,8 +891,9 @@
 
     });
   </script>
-  
+  <script type="text/javascript" src="dist/js/tabulator.min.js"></script>
   <script src= "../static/js/PlotlySunburst1.js"></script> 
+  <script src= "../static/js/table.js"></script> 
 </body>
 
 </html>

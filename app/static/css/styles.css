@@ -114,3 +114,33 @@ d3fc-canvas {
   -webkit-transform: perspective(300px) rotateX(30deg);
   transform: perspective(300px) rotateX(30deg);
 }
+
+/*Theme the Tabulator element*/
+#example-table-theme{
+  background-color:#ccc;
+  border: 1px solid #333;
+  border-radius: 10px;
+}
+
+/*Theme the header*/
+#example-table-theme .tabulator-header {
+  background-color:#333;
+  color:#fff;
+}
+
+/*Allow column header names to wrap lines*/
+#example-table-theme .tabulator-header .tabulator-col,
+#example-table-theme .tabulator-header .tabulator-col-row-handle {
+  white-space: normal;
+}
+
+/*Color the table rows*/
+#example-table-theme .tabulator-tableHolder .tabulator-table .tabulator-row{
+  color:#fff;
+  background-color: #666;
+}
+
+/*Color even rows*/
+  #example-table-theme .tabulator-tableHolder .tabulator-table .tabulator-row:nth-child(even) {
+  background-color: #444;
+}

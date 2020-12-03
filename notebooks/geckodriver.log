@@ -216,3 +216,193 @@ A content process crashed and MOZ_CRASHREPORTER_SHUTDOWN is set, shutting down
 
 ###!!! [Child][RunMessage] Error: Channel closing: too late to send/recv, messages will be lost
 
+1606692143178	geckodriver	INFO	Listening on 127.0.0.1:51588
+1606692146274	mozrunner::runner	INFO	Running command: "C:\\Program Files\\Mozilla Firefox\\firefox.exe" "--marionette" "-foreground" "-no-remote" "-profile" "C:\\WINDOWS\\TEMP\\rust_mozprofilejAOlUH"
+JavaScript error: resource://gre/modules/XULStore.jsm, line 66: Error: Can't find profile directory.
+console.error: SearchCache: "_readCacheFile: Error reading cache file:" (new Error("", "(unknown module)"))
+1606692213701	Marionette	INFO	Listening on port 51599
+1606692775426	Marionette	INFO	Stopped listening on port 51599
+
+###!!! [Child][RunMessage] Error: Channel closing: too late to send/recv, messages will be lost
+
+
+###!!! [Child][MessageChannel::SendAndWait] Error: Channel error: cannot send/recv
+
+P4xaLv"
+JavaScript error: resource://gre/modules/XULStore.jsm, line 66: Error: Can't find profile directory.
+console.error: SearchCache: "_readCacheFile: Error reading cache file:" (new Error("", "(unknown module)"))
+1606692270316	Marionette	INFO	Listening on port 51695
+1606692270916	Marionette	WARN	TLS certificate errors will be ignored for this session
+JavaScript error: https://www.investopedia.com/top-communications-stocks-4583180 line 6 > injectedScript, line 18: ReferenceError: ReportingObserver is not defined
+JavaScript error: https://www.investopedia.com/top-communications-stocks-4583180 line 6 > injectedScript, line 18: ReferenceError: ReportingObserver is not defined
+JavaScript error: https://www.investopedia.com/top-communications-stocks-4583180 line 6 > injectedScript, line 18: ReferenceError: ReportingObserver is not defined
+JavaScript error: https://www.investopedia.com/top-communications-stocks-4583180 line 6 > injectedScript, line 18: ReferenceError: ReportingObserver is not defined
+JavaScript error: https://www.investopedia.com/top-communications-stocks-4583180 line 6 > injectedScript, line 18: ReferenceError: ReportingObserver is not defined
+JavaScript error: https://www.investopedia.com/top-communications-stocks-4583180 line 6 > injectedScript, line 18: ReferenceError: ReportingObserver is not defined
+JavaScript error: https://www.investopedia.com/top-communications-stocks-4583180 line 6 > injectedScript, line 50: ReferenceError: ReportingObserver is not defined
+JavaScript error: https://4ee24cac311cca5a9379a493127e2daa.safeframe.googlesyndication.com/safeframe/1-0-37/html/container.html line 7 > injectedScript, line 25: ReferenceError: ReportingObserver is not defined
+JavaScript error: https://4ee24cac311cca5a9379a493127e2daa.safeframe.googlesyndication.com/safeframe/1-0-37/html/container.html line 7 > injectedScript, line 25: ReferenceError: ReportingObserver is not defined
+JavaScript error: https://4ee24cac311cca5a9379a493127e2daa.safeframe.googlesyndication.com/safeframe/1-0-37/html/container.html line 7 > injectedScript, line 25: ReferenceError: ReportingObserver is not defined
+JavaScript error: https://4ee24cac311cca5a9379a493127e2daa.safeframe.googlesyndication.com/safeframe/1-0-37/html/container.html line 7 > injectedScript, line 25: ReferenceError: ReportingObserver is not defined
+JavaScript error: https://4ee24cac311cca5a9379a493127e2daa.safeframe.googlesyndication.com/safeframe/1-0-37/html/container.html line 7 > injectedScript, line 25: ReferenceError: ReportingObserver is not defined
+Can't find symbol 'eglSwapBuffersWithDamageEXT'.
+JavaScript error: , line 0: uncaught exception: undefined
+JavaScript error: https://c.amazon-adsystem.com/bao-csm/direct/csm_othersv5.js, line 1: SecurityError: Permission denied to access property "removeEventListener" on cross-origin object
+JavaScript error: https://www.investopedia.com/investing/consumer-cyclical-stocks/ line 6 > injectedScript, line 18: ReferenceError: ReportingObserver is not defined
+JavaScript error: https://www.investopedia.com/investing/consumer-cyclical-stocks/ line 6 > injectedScript, line 18: ReferenceError: ReportingObserver is not defined
+JavaScript error: https://www.investopedia.com/investing/consumer-cyclical-stocks/ line 6 > injectedScript, line 18: ReferenceError: ReportingObserver is not defined
+JavaScript error: https://www.investopedia.com/investing/consumer-cyclical-stocks/ line 6 > injectedScript, line 18: ReferenceError: ReportingObserver is not defined
+JavaScript error: https://www.investopedia.com/investing/consumer-cyclical-stocks/ line 6 > injectedScript, line 18: ReferenceError: ReportingObserver is not defined
+JavaScript error: https://www.investopedia.com/investing/consumer-cyclical-stocks/ line 6 > injectedScript, line 18: ReferenceError: ReportingObserver is not defined
+JavaScript error: , line 0: uncaught exception: undefined
+JavaScript error: https://www.investopedia.com/investing/consumer-defensive-stocks/ line 6 > injectedScript, line 18: ReferenceError: ReportingObserver is not defined
+JavaScript error: https://www.investopedia.com/investing/consumer-defensive-stocks/ line 6 > injectedScript, line 18: ReferenceError: ReportingObserver is not defined
+JavaScript error: https://www.investopedia.com/investing/consumer-defensive-stocks/ line 6 > injectedScript, line 18: ReferenceError: ReportingObserver is not defined
+JavaScript error: https://www.investopedia.com/investing/consumer-defensive-stocks/ line 6 > injectedScript, line 18: ReferenceError: ReportingObserver is not defined
+JavaScript error: https://www.investopedia.com/investing/consumer-defensive-stocks/ line 6 > injectedScript, line 18: ReferenceError: ReportingObserver is not defined
+JavaScript error: https://www.investopedia.com/investing/consumer-defensive-stocks/ line 6 > injectedScript, line 18: ReferenceError: ReportingObserver is not defined
+JavaScript error: , line 0: uncaught exception: undefined
+JavaScript error: https://www.investopedia.com/top-energy-stocks-4582081 line 6 > injectedScript, line 18: ReferenceError: ReportingObserver is not defined
+JavaScript error: https://www.investopedia.com/top-energy-stocks-4582081 line 6 > injectedScript, line 18: ReferenceError: ReportingObserver is not defined
+JavaScript error: https://www.investopedia.com/top-energy-stocks-4582081 line 6 > injectedScript, line 18: ReferenceError: ReportingObserver is not defined
+JavaScript error: https://www.investopedia.com/top-energy-stocks-4582081 line 6 > injectedScript, line 18: ReferenceError: ReportingObserver is not defined
+JavaScript error: https://www.investopedia.com/top-energy-stocks-4582081 line 6 > injectedScript, line 18: ReferenceError: ReportingObserver is not defined
+JavaScript error: https://www.investopedia.com/top-energy-stocks-4582081 line 6 > injectedScript, line 18: ReferenceError: ReportingObserver is not defined
+JavaScript error: https://4b5d6a4199dab6c28255f14c59541e63.safeframe.googlesyndication.com/safeframe/1-0-37/html/container.html line 7 > injectedScript, line 25: ReferenceError: ReportingObserver is not defined
+JavaScript error: https://4b5d6a4199dab6c28255f14c59541e63.safeframe.googlesyndication.com/safeframe/1-0-37/html/container.html line 7 > injectedScript, line 25: ReferenceError: ReportingObserver is not defined
+JavaScript error: https://4b5d6a4199dab6c28255f14c59541e63.safeframe.googlesyndication.com/safeframe/1-0-37/html/container.html line 7 > injectedScript, line 25: ReferenceError: ReportingObserver is not defined
+JavaScript error: https://4b5d6a4199dab6c28255f14c59541e63.safeframe.googlesyndication.com/safeframe/1-0-37/html/container.html line 7 > injectedScript, line 25: ReferenceError: ReportingObserver is not defined
+JavaScript error: https://4b5d6a4199dab6c28255f14c59541e63.safeframe.googlesyndication.com/safeframe/1-0-37/html/container.html line 7 > injectedScript, line 25: ReferenceError: ReportingObserver is not defined
+JavaScript error: https://g.3gl.net/jp/555/v3.3.0/M, line 1: SecurityError: Permission denied to access property "performance" on cross-origin object
+JavaScript error: https://www.investopedia.com/top-financial-stocks-4582168 line 6 > injectedScript, line 18: ReferenceError: ReportingObserver is not defined
+JavaScript error: https://www.investopedia.com/top-financial-stocks-4582168 line 6 > injectedScript, line 18: ReferenceError: ReportingObserver is not defined
+JavaScript error: https://www.investopedia.com/top-financial-stocks-4582168 line 6 > injectedScript, line 18: ReferenceError: ReportingObserver is not defined
+JavaScript error: https://www.investopedia.com/top-financial-stocks-4582168 line 6 > injectedScript, line 18: ReferenceError: ReportingObserver is not defined
+JavaScript error: https://www.investopedia.com/top-financial-stocks-4582168 line 6 > injectedScript, line 18: ReferenceError: ReportingObserver is not defined
+JavaScript error: https://www.investopedia.com/top-financial-stocks-4582168 line 6 > injectedScript, line 18: ReferenceError: ReportingObserver is not defined
+JavaScript error: https://a8739f386116ec13a4f471ea42215864.safeframe.googlesyndication.com/safeframe/1-0-37/html/container.html line 7 > injectedScript, line 25: ReferenceError: ReportingObserver is not defined
+JavaScript error: https://a8739f386116ec13a4f471ea42215864.safeframe.googlesyndication.com/safeframe/1-0-37/html/container.html line 7 > injectedScript, line 25: ReferenceError: ReportingObserver is not defined
+JavaScript error: https://a8739f386116ec13a4f471ea42215864.safeframe.googlesyndication.com/safeframe/1-0-37/html/container.html line 7 > injectedScript, line 25: ReferenceError: ReportingObserver is not defined
+JavaScript error: https://static.zdassets.com/web_widget/latest/web_widget.72b9ce28b4b990eba840.chunk.js, line 2: SecurityError: Permission denied to access property "localStorage" on cross-origin object
+JavaScript error: https://www.investopedia.com/investing/top-healthcare-stocks/ line 6 > injectedScript, line 18: ReferenceError: ReportingObserver is not defined
+JavaScript error: https://www.investopedia.com/investing/top-healthcare-stocks/ line 6 > injectedScript, line 18: ReferenceError: ReportingObserver is not defined
+JavaScript error: https://www.investopedia.com/investing/top-healthcare-stocks/ line 6 > injectedScript, line 18: ReferenceError: ReportingObserver is not defined
+JavaScript error: https://www.investopedia.com/investing/top-healthcare-stocks/ line 6 > injectedScript, line 18: ReferenceError: ReportingObserver is not defined
+JavaScript error: https://www.investopedia.com/investing/top-healthcare-stocks/ line 6 > injectedScript, line 18: ReferenceError: ReportingObserver is not defined
+JavaScript error: https://www.investopedia.com/investing/top-healthcare-stocks/ line 6 > injectedScript, line 18: ReferenceError: ReportingObserver is not defined
+JavaScript error: , line 0: uncaught exception: undefined
+JavaScript error: https://cdn.ampproject.org/rtv/012010270040000/v0/amp-analytics-0.1.mjs, line 4: NS_ERROR_NOT_INITIALIZED: 
+JavaScript error: https://www.investopedia.com/top-materials-stocks-4582152 line 6 > injectedScript, line 18: ReferenceError: ReportingObserver is not defined
+JavaScript error: https://www.investopedia.com/top-materials-stocks-4582152 line 6 > injectedScript, line 18: ReferenceError: ReportingObserver is not defined
+JavaScript error: https://www.investopedia.com/top-materials-stocks-4582152 line 6 > injectedScript, line 18: ReferenceError: ReportingObserver is not defined
+JavaScript error: https://www.investopedia.com/top-materials-stocks-4582152 line 6 > injectedScript, line 18: ReferenceError: ReportingObserver is not defined
+JavaScript error: https://www.investopedia.com/top-materials-stocks-4582152 line 6 > injectedScript, line 18: ReferenceError: ReportingObserver is not defined
+JavaScript error: https://www.investopedia.com/top-materials-stocks-4582152 line 6 > injectedScript, line 18: ReferenceError: ReportingObserver is not defined
+JavaScript error: https://5f4d20c504c46d50d17a6c2911fbdc9b.safeframe.googlesyndication.com/safeframe/1-0-37/html/container.html line 7 > injectedScript, line 25: ReferenceError: ReportingObserver is not defined
+JavaScript error: https://5f4d20c504c46d50d17a6c2911fbdc9b.safeframe.googlesyndication.com/safeframe/1-0-37/html/container.html line 7 > injectedScript, line 25: ReferenceError: ReportingObserver is not defined
+JavaScript error: https://5f4d20c504c46d50d17a6c2911fbdc9b.safeframe.googlesyndication.com/safeframe/1-0-37/html/container.html line 7 > injectedScript, line 25: ReferenceError: ReportingObserver is not defined
+JavaScript error: https://5f4d20c504c46d50d17a6c2911fbdc9b.safeframe.googlesyndication.com/safeframe/1-0-37/html/container.html line 7 > injectedScript, line 25: ReferenceError: ReportingObserver is not defined
+JavaScript error: https://5f4d20c504c46d50d17a6c2911fbdc9b.safeframe.googlesyndication.com/safeframe/1-0-37/html/container.html line 7 > injectedScript, line 25: ReferenceError: ReportingObserver is not defined
+JavaScript error: https://5f4d20c504c46d50d17a6c2911fbdc9b.safeframe.googlesyndication.com/safeframe/1-0-37/html/container.html line 7 > injectedScript, line 25: ReferenceError: ReportingObserver is not defined
+1606692740111	Marionette	INFO	Stopped listening on port 51695
+1606692836755	geckodriver	INFO	Listening on 127.0.0.1:52470
+1606692840012	mozrunner::runner	INFO	Running command: "C:\\Program Files\\Mozilla Firefox\\firefox.exe" "--marionette" "-foreground" "-no-remote" "-profile" "C:\\WINDOWS\\TEMP\\rust_mozprofilegO8zos"
+JavaScript error: resource://gre/modules/XULStore.jsm, line 66: Error: Can't find profile directory.
+console.error: SearchCache: "_readCacheFile: Error reading cache file:" (new Error("", "(unknown module)"))
+1606692853062	Marionette	INFO	Listening on port 52478
+1606692853265	Marionette	WARN	TLS certificate errors will be ignored for this session
+JavaScript error: https://www.investopedia.com/top-communications-stocks-4583180 line 6 > injectedScript, line 18: ReferenceError: ReportingObserver is not defined
+JavaScript error: https://www.investopedia.com/top-communications-stocks-4583180 line 6 > injectedScript, line 18: ReferenceError: ReportingObserver is not defined
+JavaScript error: https://www.investopedia.com/top-communications-stocks-4583180 line 6 > injectedScript, line 18: ReferenceError: ReportingObserver is not defined
+JavaScript error: https://www.investopedia.com/top-communications-stocks-4583180 line 6 > injectedScript, line 18: ReferenceError: ReportingObserver is not defined
+JavaScript error: https://www.investopedia.com/top-communications-stocks-4583180 line 6 > injectedScript, line 18: ReferenceError: ReportingObserver is not defined
+JavaScript error: https://www.investopedia.com/top-communications-stocks-4583180 line 6 > injectedScript, line 18: ReferenceError: ReportingObserver is not defined
+JavaScript error: https://8c82181d26dc1661af8ccb2ac22da398.safeframe.googlesyndication.com/safeframe/1-0-37/html/container.html line 7 > injectedScript, line 25: ReferenceError: ReportingObserver is not defined
+JavaScript error: https://8c82181d26dc1661af8ccb2ac22da398.safeframe.googlesyndication.com/safeframe/1-0-37/html/container.html line 7 > injectedScript, line 25: ReferenceError: ReportingObserver is not defined
+JavaScript error: https://8c82181d26dc1661af8ccb2ac22da398.safeframe.googlesyndication.com/safeframe/1-0-37/html/container.html line 7 > injectedScript, line 25: ReferenceError: ReportingObserver is not defined
+JavaScript error: https://8c82181d26dc1661af8ccb2ac22da398.safeframe.googlesyndication.com/safeframe/1-0-37/html/container.html line 7 > injectedScript, line 25: ReferenceError: ReportingObserver is not defined
+JavaScript error: https://8c82181d26dc1661af8ccb2ac22da398.safeframe.googlesyndication.com/safeframe/1-0-37/html/container.html line 7 > injectedScript, line 25: ReferenceError: ReportingObserver is not defined
+Can't find symbol 'eglSwapBuffersWithDamageEXT'.
+JavaScript error: https://fw.adsafeprotected.com/rjss/www.googletagservices.com/506324/48971183/dcm/dcmads.js, line 1025: NS_ERROR_FAILURE: 
+JavaScript error: https://tpc.googlesyndication.com/pagead/js/r20201112/r20110914/client/qs_click_protection_fy2019.js, line 15: NS_ERROR_NOT_INITIALIZED: 
+JavaScript error: https://static-eb.media.net/rtb/resource/adperformance.js?v=c7ed9102e5, line 1: NS_ERROR_NOT_INITIALIZED: 
+JavaScript error: https://www.investopedia.com/top-communications-stocks-4583180 line 6 > injectedScript, line 18: ReferenceError: ReportingObserver is not defined
+JavaScript error: https://www.investopedia.com/top-communications-stocks-4583180 line 6 > injectedScript, line 18: ReferenceError: ReportingObserver is not defined
+JavaScript error: https://www.investopedia.com/top-communications-stocks-4583180 line 6 > injectedScript, line 18: ReferenceError: ReportingObserver is not defined
+JavaScript error: https://www.investopedia.com/top-communications-stocks-4583180 line 6 > injectedScript, line 18: ReferenceError: ReportingObserver is not defined
+JavaScript error: https://www.investopedia.com/top-communications-stocks-4583180 line 6 > injectedScript, line 18: ReferenceError: ReportingObserver is not defined
+JavaScript error: https://www.investopedia.com/top-communications-stocks-4583180 line 6 > injectedScript, line 18: ReferenceError: ReportingObserver is not defined
+JavaScript error: https://0bfe07d0074d716310e4d65f69d538a8.safeframe.googlesyndication.com/safeframe/1-0-37/html/container.html line 7 > injectedScript, line 25: ReferenceError: ReportingObserver is not defined
+JavaScript error: https://0bfe07d0074d716310e4d65f69d538a8.safeframe.googlesyndication.com/safeframe/1-0-37/html/container.html line 7 > injectedScript, line 25: ReferenceError: ReportingObserver is not defined
+JavaScript error: https://0bfe07d0074d716310e4d65f69d538a8.safeframe.googlesyndication.com/safeframe/1-0-37/html/container.html line 7 > injectedScript, line 25: ReferenceError: ReportingObserver is not defined
+JavaScript error: https://0bfe07d0074d716310e4d65f69d538a8.safeframe.googlesyndication.com/safeframe/1-0-37/html/container.html line 7 > injectedScript, line 25: ReferenceError: ReportingObserver is not defined
+JavaScript error: https://0bfe07d0074d716310e4d65f69d538a8.safeframe.googlesyndication.com/safeframe/1-0-37/html/container.html line 7 > injectedScript, line 25: ReferenceError: ReportingObserver is not defined
+JavaScript error: https://www.investopedia.com/investing/consumer-cyclical-stocks/ line 6 > injectedScript, line 18: ReferenceError: ReportingObserver is not defined
+JavaScript error: https://www.investopedia.com/investing/consumer-cyclical-stocks/ line 6 > injectedScript, line 18: ReferenceError: ReportingObserver is not defined
+JavaScript error: https://www.investopedia.com/investing/consumer-cyclical-stocks/ line 6 > injectedScript, line 18: ReferenceError: ReportingObserver is not defined
+JavaScript error: https://www.investopedia.com/investing/consumer-cyclical-stocks/ line 6 > injectedScript, line 18: ReferenceError: ReportingObserver is not defined
+JavaScript error: https://www.investopedia.com/investing/consumer-cyclical-stocks/ line 6 > injectedScript, line 18: ReferenceError: ReportingObserver is not defined
+JavaScript error: https://www.investopedia.com/investing/consumer-cyclical-stocks/, line 44: SecurityError: Permission denied to access property "document" on cross-origin object
+JavaScript error: https://www.investopedia.com/investing/consumer-cyclical-stocks/, line 44: SecurityError: Permission denied to access property "document" on cross-origin object
+JavaScript error: https://www.investopedia.com/top-energy-stocks-4582081 line 6 > injectedScript, line 18: ReferenceError: ReportingObserver is not defined
+JavaScript error: https://www.investopedia.com/top-energy-stocks-4582081 line 6 > injectedScript, line 18: ReferenceError: ReportingObserver is not defined
+JavaScript error: https://www.investopedia.com/top-energy-stocks-4582081 line 6 > injectedScript, line 18: ReferenceError: ReportingObserver is not defined
+JavaScript error: https://www.investopedia.com/top-energy-stocks-4582081 line 6 > injectedScript, line 18: ReferenceError: ReportingObserver is not defined
+JavaScript error: https://www.investopedia.com/top-energy-stocks-4582081 line 6 > injectedScript, line 18: ReferenceError: ReportingObserver is not defined
+JavaScript error: https://www.investopedia.com/top-financial-stocks-4582168 line 6 > injectedScript, line 18: ReferenceError: ReportingObserver is not defined
+JavaScript error: https://www.investopedia.com/top-financial-stocks-4582168 line 6 > injectedScript, line 18: ReferenceError: ReportingObserver is not defined
+JavaScript error: https://www.investopedia.com/top-financial-stocks-4582168, line 44: SecurityError: Permission denied to access property "document" on cross-origin object
+JavaScript error: https://www.investopedia.com/investing/top-healthcare-stocks/ line 6 > injectedScript, line 18: ReferenceError: ReportingObserver is not defined
+JavaScript error: https://www.investopedia.com/investing/top-healthcare-stocks/ line 6 > injectedScript, line 18: ReferenceError: ReportingObserver is not defined
+JavaScript error: https://www.investopedia.com/investing/top-healthcare-stocks/ line 6 > injectedScript, line 18: ReferenceError: ReportingObserver is not defined
+JavaScript error: https://www.investopedia.com/investing/top-healthcare-stocks/ line 6 > injectedScript, line 18: ReferenceError: ReportingObserver is not defined
+JavaScript error: https://www.investopedia.com/investing/top-healthcare-stocks/ line 6 > injectedScript, line 18: ReferenceError: ReportingObserver is not defined
+JavaScript error: https://www.investopedia.com/investing/top-healthcare-stocks/ line 6 > injectedScript, line 18: ReferenceError: ReportingObserver is not defined
+JavaScript error: , line 0: uncaught exception: undefined
+JavaScript error: https://www.investopedia.com/top-industrial-stocks-4582171 line 6 > injectedScript, line 18: ReferenceError: ReportingObserver is not defined
+JavaScript error: https://www.investopedia.com/top-industrial-stocks-4582171 line 6 > injectedScript, line 18: ReferenceError: ReportingObserver is not defined
+JavaScript error: https://www.investopedia.com/top-industrial-stocks-4582171 line 6 > injectedScript, line 18: ReferenceError: ReportingObserver is not defined
+JavaScript error: https://www.investopedia.com/top-industrial-stocks-4582171 line 6 > injectedScript, line 18: ReferenceError: ReportingObserver is not defined
+JavaScript error: https://www.investopedia.com/top-industrial-stocks-4582171 line 6 > injectedScript, line 18: ReferenceError: ReportingObserver is not defined
+JavaScript error: https://www.investopedia.com/top-industrial-stocks-4582171 line 6 > injectedScript, line 18: ReferenceError: ReportingObserver is not defined
+JavaScript error: , line 0: uncaught exception: undefined
+JavaScript error: https://www.investopedia.com/top-materials-stocks-4582152 line 6 > injectedScript, line 18: ReferenceError: ReportingObserver is not defined
+JavaScript error: https://www.investopedia.com/top-materials-stocks-4582152 line 6 > injectedScript, line 18: ReferenceError: ReportingObserver is not defined
+JavaScript error: https://www.investopedia.com/top-materials-stocks-4582152 line 6 > injectedScript, line 18: ReferenceError: ReportingObserver is not defined
+JavaScript error: https://www.investopedia.com/top-reits-4582128 line 6 > injectedScript, line 18: ReferenceError: ReportingObserver is not defined
+JavaScript error: https://www.investopedia.com/top-reits-4582128 line 6 > injectedScript, line 18: ReferenceError: ReportingObserver is not defined
+JavaScript error: https://www.investopedia.com/top-reits-4582128 line 6 > injectedScript, line 18: ReferenceError: ReportingObserver is not defined
+JavaScript error: https://www.investopedia.com/top-reits-4582128 line 6 > injectedScript, line 18: ReferenceError: ReportingObserver is not defined
+JavaScript error: https://www.investopedia.com/top-reits-4582128, line 44: SecurityError: Permission denied to access property "document" on cross-origin object
+JavaScript error: https://www.investopedia.com/top-reits-4582128, line 44: SecurityError: Permission denied to access property "document" on cross-origin object
+JavaScript error: https://www.investopedia.com/top-tech-stocks-4581295 line 6 > injectedScript, line 18: ReferenceError: ReportingObserver is not defined
+JavaScript error: https://www.investopedia.com/top-tech-stocks-4581295 line 6 > injectedScript, line 18: ReferenceError: ReportingObserver is not defined
+JavaScript error: https://www.investopedia.com/top-tech-stocks-4581295, line 44: SecurityError: Permission denied to access property "document" on cross-origin object
+JavaScript error: https://www.investopedia.com/top-utilities-stocks-4582243 line 6 > injectedScript, line 18: ReferenceError: ReportingObserver is not defined
+JavaScript error: https://www.investopedia.com/top-utilities-stocks-4582243 line 6 > injectedScript, line 18: ReferenceError: ReportingObserver is not defined
+JavaScript error: https://www.investopedia.com/top-utilities-stocks-4582243 line 6 > injectedScript, line 18: ReferenceError: ReportingObserver is not defined
+JavaScript error: https://www.investopedia.com/top-utilities-stocks-4582243 line 6 > injectedScript, line 18: ReferenceError: ReportingObserver is not defined
+JavaScript error: https://www.investopedia.com/top-utilities-stocks-4582243 line 6 > injectedScript, line 18: ReferenceError: ReportingObserver is not defined
+JavaScript error: https://www.investopedia.com/top-utilities-stocks-4582243 line 6 > injectedScript, line 18: ReferenceError: ReportingObserver is not defined
+JavaScript error: https://d41a87cf17b876c6f325277298507373.safeframe.googlesyndication.com/safeframe/1-0-37/html/container.html line 7 > injectedScript, line 25: ReferenceError: ReportingObserver is not defined
+JavaScript error: https://d41a87cf17b876c6f325277298507373.safeframe.googlesyndication.com/safeframe/1-0-37/html/container.html line 7 > injectedScript, line 25: ReferenceError: ReportingObserver is not defined
+JavaScript error: https://d41a87cf17b876c6f325277298507373.safeframe.googlesyndication.com/safeframe/1-0-37/html/container.html line 7 > injectedScript, line 25: ReferenceError: ReportingObserver is not defined
+JavaScript error: https://d41a87cf17b876c6f325277298507373.safeframe.googlesyndication.com/safeframe/1-0-37/html/container.html line 7 > injectedScript, line 25: ReferenceError: ReportingObserver is not defined
+JavaScript error: https://d41a87cf17b876c6f325277298507373.safeframe.googlesyndication.com/safeframe/1-0-37/html/container.html line 7 > injectedScript, line 25: ReferenceError: ReportingObserver is not defined
+JavaScript error: https://d41a87cf17b876c6f325277298507373.safeframe.googlesyndication.com/safeframe/1-0-37/html/container.html line 7 > injectedScript, line 25: ReferenceError: ReportingObserver is not defined
+1606692937512	Marionette	INFO	Stopped listening on port 52478
+
+###!!! [Child][RunMessage] Error: Channel closing: too late to send/recv, messages will be lost
+
+
+###!!! [Child][RunMessage] Error: Channel closing: too late to send/recv, messages will be lost
+
+
+###!!! [Child][RunMessage] Error: Channel closing: too late to send/recv, messages will be lost
+
+
+###!!! [Child][RunMessage] Error: Channel closing: too late to send/recv, messages will be lost
+
+
+###!!! [Child][MessageChannel::SendAndWait] Error: Channel error: cannot send/recv
+
